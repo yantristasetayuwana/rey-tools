@@ -4,2761 +4,2032 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>REY TOOLS — Everything You Need. One Place.</title>
-
-<meta name="description"
-content="REY TOOLS — Simple, useful and fast online tools for everyday work, productivity and creativity.">
-
-<meta name="theme-color" content="#524646">
+<title>REY TOOLS — Modern Web Utilities</title>
 
 <style>
-
-/* =========================================================
-   REY TOOLS
-   V1.3 — WARM FUTURISTIC
-   ========================================================= */
-
 :root{
+  --bg:#F5F3EE;
+  --paper:#FFFFFF;
+  --text:#252525;
+  --muted:#77736D;
+  --line:#DDD8CF;
 
-    --dark:#524646;
-    --muted:#A8A492;
-    --cream:#FCF2E5;
-    --accent:#EC5B38;
+  --rose:#D9A7B0;
+  --terracotta:#D9A06F;
+  --blue:#9FBBC7;
+  --sage:#9EB9AA;
+  --gray:#B8B7B0;
+  --beige:#E8E1D6;
 
-    --white:#ffffff;
+  --dark-rose:#5A3941;
+  --dark-orange:#5A3D29;
+  --dark-blue:#304A55;
+  --dark-green:#354D42;
+  --dark-gray:#44433F;
 
-    --dark-soft:#625555;
-    --cream-dark:#f5e8d8;
-
-    --border:rgba(82,70,70,.14);
-
-    --shadow:
-        0 12px 35px rgba(82,70,70,.09);
-
-    --shadow-hover:
-        0 22px 50px rgba(82,70,70,.15);
-
-    --radius:18px;
-
+  --shadow:0 8px 28px rgba(40,35,30,.07);
 }
 
-
-/* =========================================================
-   RESET
-   ========================================================= */
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 
-    font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
-    color:var(--dark);
-
-    background:
-
-        radial-gradient(
-            circle at 8% 0%,
-            rgba(236,91,56,.10),
-            transparent 26%
-        ),
-
-        radial-gradient(
-            circle at 92% 12%,
-            rgba(168,164,146,.16),
-            transparent 25%
-        ),
-
-        var(--cream);
-
-    min-height:100vh;
-
+  background:var(--bg);
+  color:var(--text);
+  min-height:100vh;
 }
 
 button,
 input{
-    font:inherit;
+  font:inherit;
 }
 
-
-/* =========================================================
+/* =========================
    HEADER
-   ========================================================= */
+========================= */
 
 header{
+  position:sticky;
+  top:0;
+  z-index:100;
 
-    position:sticky;
-
-    top:0;
-
-    z-index:1000;
-
-    background:
-        rgba(252,242,229,.88);
-
-    backdrop-filter:
-        blur(18px);
-
-    border-bottom:
-        1px solid
-        rgba(82,70,70,.10);
-
+  background:rgba(245,243,238,.96);
+  border-bottom:1px solid var(--line);
 }
 
 .header-inner{
+  max-width:1400px;
+  margin:auto;
+  min-height:76px;
+  padding:0 28px;
 
-    max-width:1280px;
-
-    height:72px;
-
-    margin:auto;
-
-    padding:
-        0 24px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
 }
 
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
 
-/* LOGO */
-
-.logo{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:11px;
-
-    color:var(--dark);
-
-    text-decoration:none;
-
+  color:var(--text);
+  text-decoration:none;
 }
 
-.logo-mark{
+.brand-logo{
+  width:42px;
+  height:42px;
 
-    width:40px;
-    height:40px;
+  border-radius:13px;
+  background:var(--text);
 
-    border-radius:12px;
+  display:grid;
+  place-items:center;
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    color:var(--cream);
-
-    font-size:18px;
-
-    font-weight:900;
-
-    background:
-
-        linear-gradient(
-            135deg,
-            var(--dark),
-            var(--accent)
-        );
-
-    box-shadow:
-
-        0 8px 20px
-        rgba(82,70,70,.18);
-
+  position:relative;
 }
 
-.logo-name{
-
-    font-size:20px;
-
-    font-weight:900;
-
-    letter-spacing:-.6px;
-
+.brand-logo span{
+  position:absolute;
+  width:10px;
+  height:10px;
+  border:2px solid var(--paper);
+  border-radius:3px;
 }
 
-.logo-name span{
-
-    color:var(--accent);
-
+.brand-logo span:nth-child(1){
+  top:9px;
+  left:9px;
 }
 
-
-/* NAV */
-
-.nav{
-
-    display:flex;
-
-    gap:5px;
-
+.brand-logo span:nth-child(2){
+  right:9px;
+  bottom:9px;
 }
 
-.nav button{
-
-    border:0;
-
-    background:transparent;
-
-    color:var(--dark);
-
-    opacity:.65;
-
-    padding:
-        9px 13px;
-
-    border-radius:10px;
-
-    cursor:pointer;
-
-    font-size:13px;
-
-    font-weight:700;
-
-    transition:.2s;
-
+.brand-name{
+  font-size:20px;
+  font-weight:900;
+  letter-spacing:-.7px;
 }
 
-.nav button:hover{
-
-    opacity:1;
-
-    color:var(--accent);
-
-    background:
-        rgba(236,91,56,.08);
-
+.brand-name span{
+  font-weight:500;
+  color:#777;
 }
 
+.header-right{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
 
-/* =========================================================
+.header-link{
+  border:0;
+  background:transparent;
+  color:#69655F;
+  padding:9px 13px;
+  border-radius:9px;
+  cursor:pointer;
+}
+
+.header-link:hover{
+  background:var(--paper);
+  color:var(--text);
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main{
+  max-width:1400px;
+  margin:auto;
+  padding:0 28px 70px;
+}
+
+/* =========================
    HERO
-   ========================================================= */
+========================= */
 
 .hero{
-
-    max-width:1050px;
-
-    margin:auto;
-
-    padding:
-        90px 24px
-        65px;
-
-    text-align:center;
-
-    position:relative;
-
-    overflow:hidden;
-
+  padding:70px 0 42px;
 }
 
+.hero-label{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
 
-/* decorative gradients */
+  color:#66615B;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
 
-.hero::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:380px;
-    height:380px;
-
-    left:-170px;
-    top:-90px;
-
-    border-radius:50%;
-
-    background:
-
-        radial-gradient(
-            circle,
-            rgba(236,91,56,.12),
-            transparent 68%
-        );
-
-    pointer-events:none;
-
+  margin-bottom:16px;
 }
 
-.hero::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:350px;
-    height:350px;
-
-    right:-150px;
-    top:20px;
-
-    border-radius:50%;
-
-    background:
-
-        radial-gradient(
-            circle,
-            rgba(168,164,146,.22),
-            transparent 68%
-        );
-
-    pointer-events:none;
-
+.hero-dot{
+  width:7px;
+  height:7px;
+  background:var(--sage);
+  border-radius:50%;
 }
-
-.hero-content{
-
-    position:relative;
-
-    z-index:2;
-
-}
-
-
-/* BADGE */
-
-.hero-badge{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    padding:
-        8px 14px;
-
-    border-radius:999px;
-
-    background:
-
-        linear-gradient(
-            135deg,
-            rgba(82,70,70,.08),
-            rgba(236,91,56,.10)
-        );
-
-    border:
-        1px solid
-        rgba(82,70,70,.10);
-
-    color:var(--dark);
-
-    font-size:11px;
-
-    font-weight:800;
-
-    letter-spacing:.5px;
-
-    margin-bottom:24px;
-
-}
-
-.badge-dot{
-
-    width:7px;
-    height:7px;
-
-    border-radius:50%;
-
-    background:var(--accent);
-
-    box-shadow:
-        0 0 0 4px
-        rgba(236,91,56,.10);
-
-}
-
-
-/* TITLE */
 
 .hero h1{
+  max-width:800px;
 
-    font-size:
-        clamp(
-            48px,
-            8vw,
-            86px
-        );
-
-    line-height:.95;
-
-    letter-spacing:-5px;
-
-    font-weight:950;
-
+  font-size:clamp(42px,6vw,72px);
+  line-height:.98;
+  letter-spacing:-4px;
+  font-weight:900;
 }
 
-.hero h1 .normal{
-
-    color:var(--dark);
-
+.hero h1 span{
+  color:#81776D;
 }
 
-.hero h1 .gradient{
+.hero-description{
+  max-width:650px;
+  margin-top:22px;
 
-    background:
-
-        linear-gradient(
-            105deg,
-            var(--dark) 5%,
-            var(--accent) 90%
-        );
-
-    -webkit-background-clip:text;
-
-    background-clip:text;
-
-    color:transparent;
-
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.7;
 }
 
-.hero p{
-
-    max-width:650px;
-
-    margin:
-        24px auto
-        32px;
-
-    color:
-        rgba(82,70,70,.67);
-
-    font-size:16px;
-
-    line-height:1.7;
-
-}
-
-
-/* =========================================================
+/* =========================
    SEARCH
-   ========================================================= */
+========================= */
 
 .search-wrap{
+  margin-bottom:38px;
+}
 
-    max-width:730px;
+.search-box{
+  height:60px;
+  background:var(--paper);
 
-    margin:auto;
+  border:1px solid var(--line);
+  border-radius:15px;
 
-    position:relative;
+  display:flex;
+  align-items:center;
+  gap:13px;
 
+  padding:0 18px;
+
+  box-shadow:var(--shadow);
+
+  transition:.2s ease;
+}
+
+.search-box:focus-within{
+  border-color:#AAA49B;
+  box-shadow:0 10px 30px rgba(40,35,30,.10);
 }
 
 .search-icon{
+  width:21px;
+  height:21px;
 
-    position:absolute;
-
-    left:20px;
-
-    top:18px;
-
-    color:var(--muted);
-
-    font-size:22px;
-
-    pointer-events:none;
-
+  color:#8B867F;
+  flex-shrink:0;
 }
 
-.search{
-
-    width:100%;
-
-    height:62px;
-
-    padding:
-        0 22px
-        0 54px;
-
-    border:
-        1px solid
-        rgba(82,70,70,.16);
-
-    border-radius:17px;
-
-    outline:none;
-
-    background:
-        rgba(255,255,255,.82);
-
-    color:var(--dark);
-
-    font-size:15px;
-
-    box-shadow:var(--shadow);
-
-    transition:.25s;
-
+.search-icon svg{
+  width:100%;
+  height:100%;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
 }
 
-.search::placeholder{
+.search-box input{
+  width:100%;
 
-    color:
-        rgba(82,70,70,.45);
+  border:0;
+  outline:0;
+  background:transparent;
 
+  color:var(--text);
+  font-size:15px;
 }
 
-.search:focus{
-
-    border-color:
-        rgba(236,91,56,.55);
-
-    box-shadow:
-
-        0 0 0 4px
-        rgba(236,91,56,.08),
-
-        var(--shadow);
-
+.search-box input::placeholder{
+  color:#9A958D;
 }
 
-
-/* =========================================================
-   MAIN
-   ========================================================= */
-
-main{
-
-    max-width:1280px;
-
-    margin:auto;
-
-    padding:
-        0 24px
-        85px;
-
-}
-
-.section{
-
-    margin-top:42px;
-
-}
-
-.section-header{
-
-    display:flex;
-
-    align-items:end;
-
-    justify-content:space-between;
-
-    margin-bottom:18px;
-
-}
+/* =========================
+   SECTION TITLE
+========================= */
 
 .section-title{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:20px;
 
-    font-size:21px;
-
-    font-weight:900;
-
-    letter-spacing:-.5px;
-
+  margin-bottom:17px;
 }
 
-.section-sub{
-
-    margin-top:5px;
-
-    color:
-        rgba(82,70,70,.55);
-
-    font-size:12px;
-
+.section-title h2{
+  font-size:23px;
+  letter-spacing:-.8px;
 }
 
-
-/* =========================================================
-   TOOL GRID
-   ========================================================= */
-
-.tool-grid{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap:15px;
-
+.section-title p{
+  color:#8A857D;
+  font-size:13px;
 }
 
-
-/* CARD */
-
-.tool-card{
-
-    position:relative;
-
-    min-height:178px;
-
-    padding:19px;
-
-    border:
-        1px solid
-        var(--border);
-
-    border-radius:
-        var(--radius);
-
-    background:
-        rgba(255,255,255,.86);
-
-    box-shadow:
-
-        0 5px 20px
-        rgba(82,70,70,.045);
-
-    cursor:pointer;
-
-    overflow:hidden;
-
-    transition:
-
-        transform .22s ease,
-        box-shadow .22s ease,
-        border-color .22s ease;
-
-}
-
-.tool-card:hover{
-
-    transform:
-        translateY(-5px);
-
-    box-shadow:
-        var(--shadow-hover);
-
-    border-color:
-        rgba(236,91,56,.25);
-
-}
-
-
-/* top accent */
-
-.tool-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:3px;
-
-    opacity:.85;
-
-}
-
-.tool-card.orange::before{
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--accent),
-            #f49a74
-        );
-
-}
-
-.tool-card.purple::before{
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--dark),
-            #806e6e
-        );
-
-}
-
-.tool-card.yellow::before{
-
-    background:
-        linear-gradient(
-            90deg,
-            #c9b76e,
-            var(--muted)
-        );
-
-}
-
-.tool-card.red::before{
-
-    background:
-        linear-gradient(
-            90deg,
-            #c7442c,
-            var(--accent)
-        );
-
-}
-
-
-/* decorative corner */
-
-.tool-card::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:110px;
-    height:110px;
-
-    right:-55px;
-    top:-55px;
-
-    border-radius:50%;
-
-    opacity:.5;
-
-    transition:.3s;
-
-}
-
-.tool-card:hover::after{
-
-    transform:
-        scale(1.4);
-
-}
-
-.tool-card.orange::after{
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(236,91,56,.15),
-            transparent 70%
-        );
-
-}
-
-.tool-card.purple::after{
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(82,70,70,.12),
-            transparent 70%
-        );
-
-}
-
-.tool-card.yellow::after{
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(168,164,146,.20),
-            transparent 70%
-        );
-
-}
-
-.tool-card.red::after{
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(199,68,44,.13),
-            transparent 70%
-        );
-
-}
-
-
-/* ICON */
-
-.tool-icon{
-
-    width:45px;
-    height:45px;
-
-    border-radius:13px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:20px;
-
-    font-weight:800;
-
-    margin-bottom:16px;
-
-}
-
-.tool-card.orange
-.tool-icon{
-
-    color:var(--accent);
-
-    background:
-        rgba(236,91,56,.10);
-
-}
-
-.tool-card.purple
-.tool-icon{
-
-    color:var(--dark);
-
-    background:
-        rgba(82,70,70,.09);
-
-}
-
-.tool-card.yellow
-.tool-icon{
-
-    color:#857a52;
-
-    background:
-        rgba(168,164,146,.18);
-
-}
-
-.tool-card.red
-.tool-icon{
-
-    color:#c7442c;
-
-    background:
-        rgba(236,91,56,.08);
-
-}
-
-
-/* CARD TEXT */
-
-.tool-name{
-
-    font-size:15px;
-
-    font-weight:850;
-
-    margin-bottom:7px;
-
-}
-
-.tool-desc{
-
-    color:
-        rgba(82,70,70,.58);
-
-    font-size:12px;
-
-    line-height:1.5;
-
-}
-
-
-/* CARD FOOTER */
-
-.tool-footer{
-
-    position:absolute;
-
-    bottom:16px;
-
-    left:19px;
-    right:19px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    color:
-        rgba(82,70,70,.42);
-
-    font-size:10px;
-
-}
-
-.tag{
-
-    padding:
-        4px 8px;
-
-    border-radius:7px;
-
-    background:
-        rgba(168,164,146,.13);
-
-    color:
-        rgba(82,70,70,.62);
-
-}
-
-
-/* =========================================================
-   CATEGORY FILTER
-   ========================================================= */
-
-.category-filter{
-
-    display:flex;
-
-    gap:8px;
-
-    overflow-x:auto;
-
-    padding:
-        2px 0
-        13px;
-
-    scrollbar-width:none;
-
-}
-
-.category-filter::-webkit-scrollbar{
-
-    display:none;
-
-}
-
-.filter{
-
-    white-space:nowrap;
-
-    border:
-        1px solid
-        var(--border);
-
-    background:
-        rgba(255,255,255,.7);
-
-    color:
-        rgba(82,70,70,.65);
-
-    padding:
-        9px 13px;
-
-    border-radius:10px;
-
-    cursor:pointer;
-
-    font-size:12px;
-
-    font-weight:700;
-
-    transition:.2s;
-
-}
-
-.filter:hover,
-.filter.active{
-
-    color:
-        var(--cream);
-
-    background:
-
-        linear-gradient(
-            135deg,
-            var(--dark),
-            var(--accent)
-        );
-
-    border-color:
-        transparent;
-
-    box-shadow:
-        0 7px 18px
-        rgba(82,70,70,.15);
-
-}
-
-
-/* =========================================================
+/* =========================
    CATEGORY GRID
-   ========================================================= */
+========================= */
 
 .category-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:10px;
 
-    display:grid;
-
-    grid-template-columns:
-        repeat(5,1fr);
-
-    gap:12px;
-
+  margin-bottom:52px;
 }
 
-.category{
+.category-card{
+  min-height:90px;
 
-    display:flex;
+  border:1px solid transparent;
+  border-radius:14px;
 
-    align-items:center;
+  padding:14px;
 
-    gap:11px;
+  cursor:pointer;
+  text-align:left;
 
-    padding:15px;
+  display:flex;
+  align-items:center;
+  gap:11px;
 
-    background:
-        rgba(255,255,255,.78);
+  color:var(--text);
 
-    border:
-        1px solid
-        var(--border);
-
-    border-radius:15px;
-
-    cursor:pointer;
-
-    transition:.2s;
-
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    border-color .18s ease;
 }
 
-.category:hover{
+.category-card:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow);
+}
 
-    transform:
-        translateY(-3px);
-
-    border-color:
-        rgba(236,91,56,.22);
-
-    box-shadow:
-        var(--shadow);
-
+.category-card.active{
+  border-color:rgba(37,37,37,.28);
+  box-shadow:0 8px 22px rgba(40,35,30,.10);
 }
 
 .category-icon{
+  width:40px;
+  height:40px;
 
-    width:38px;
-    height:38px;
+  flex:0 0 40px;
 
-    flex-shrink:0;
+  border-radius:11px;
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:11px;
-
-    color:var(--dark);
-
-    background:
-
-        linear-gradient(
-            135deg,
-            rgba(82,70,70,.08),
-            rgba(168,164,146,.18)
-        );
-
-    font-size:10px;
-
-    font-weight:900;
-
+  display:grid;
+  place-items:center;
 }
 
-.category:nth-child(3n)
-.category-icon{
+.category-icon svg{
+  width:21px;
+  height:21px;
 
-    color:var(--accent);
-
-    background:
-        rgba(236,91,56,.09);
-
-}
-
-.category:nth-child(4n)
-.category-icon{
-
-    color:#857a52;
-
-    background:
-        rgba(168,164,146,.20);
-
-}
-
-.category:nth-child(5n)
-.category-icon{
-
-    color:#c7442c;
-
-    background:
-        rgba(236,91,56,.07);
-
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
 }
 
 .category-name{
-
-    font-size:12px;
-
-    font-weight:750;
-
+  font-size:13px;
+  font-weight:800;
 }
 
+.category-type{
+  display:block;
+  margin-top:3px;
 
-/* =========================================================
-   SEARCH RESULTS
-   ========================================================= */
-
-#searchSection{
-
-    display:none;
-
+  font-size:10px;
+  opacity:.62;
 }
 
-.empty{
+/* Matte colors */
 
-    text-align:center;
-
-    padding:
-        55px 20px;
-
-    color:
-        rgba(82,70,70,.55);
-
+.c-rose{
+  background:var(--rose);
+  color:var(--dark-rose);
 }
 
-.empty-icon{
-
-    font-size:40px;
-
-    margin-bottom:10px;
-
+.c-orange{
+  background:var(--terracotta);
+  color:var(--dark-orange);
 }
 
+.c-blue{
+  background:var(--blue);
+  color:var(--dark-blue);
+}
 
-/* =========================================================
+.c-sage{
+  background:var(--sage);
+  color:var(--dark-green);
+}
+
+.c-gray{
+  background:var(--gray);
+  color:var(--dark-gray);
+}
+
+.c-beige{
+  background:var(--beige);
+  color:#514A42;
+}
+
+/* =========================
+   TOOL AREA
+========================= */
+
+.tools-section{
+  margin-top:5px;
+}
+
+.tool-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.tool-card{
+  min-height:190px;
+
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:16px;
+
+  padding:20px;
+
+  color:var(--text);
+  text-decoration:none;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    border-color .18s ease;
+}
+
+.tool-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow);
+  border-color:#C7C1B8;
+}
+
+.tool-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+}
+
+.tool-icon{
+  width:47px;
+  height:47px;
+
+  border-radius:12px;
+
+  display:grid;
+  place-items:center;
+}
+
+.tool-icon svg{
+  width:24px;
+  height:24px;
+
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.tool-arrow{
+  color:#9A958D;
+  font-size:18px;
+
+  transition:.18s ease;
+}
+
+.tool-card:hover .tool-arrow{
+  color:var(--text);
+  transform:translate(2px,-2px);
+}
+
+.tool-info{
+  margin-top:25px;
+}
+
+.tool-info h3{
+  font-size:17px;
+  letter-spacing:-.3px;
+  margin-bottom:6px;
+}
+
+.tool-info p{
+  color:#858078;
+  font-size:13px;
+  line-height:1.5;
+}
+
+/* Tool icon colors */
+
+.i-rose{
+  background:#F0DADD;
+  color:var(--dark-rose);
+}
+
+.i-orange{
+  background:#F0D6BC;
+  color:var(--dark-orange);
+}
+
+.i-blue{
+  background:#D7E4E8;
+  color:var(--dark-blue);
+}
+
+.i-sage{
+  background:#D7E4DB;
+  color:var(--dark-green);
+}
+
+/* =========================
+   NO RESULTS
+========================= */
+
+.no-results{
+  display:none;
+
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:16px;
+
+  padding:50px 20px;
+
+  text-align:center;
+  color:#888;
+}
+
+.no-results.show{
+  display:block;
+}
+
+/* =========================
    FOOTER
-   ========================================================= */
+========================= */
 
 footer{
-
-    background:
-        linear-gradient(
-            145deg,
-            #524646,
-            #604d49
-        );
-
-    color:
-        var(--cream);
-
-    margin-top:20px;
-
+  border-top:1px solid var(--line);
+  padding:28px;
 }
 
+.footer-inner{
+  max-width:1400px;
+  margin:auto;
 
-/* FOOTER MAIN */
-
-.footer-main{
-
-    max-width:1280px;
-
-    margin:auto;
-
-    padding:
-        58px 24px
-        42px;
-
-    display:grid;
-
-    grid-template-columns:
-        1.7fr
-        1fr
-        1fr
-        1fr;
-
-    gap:42px;
-
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
-
-/* FOOTER BRAND */
-
-.footer-brand{
-
-    max-width:340px;
-
+footer p{
+  color:#8A857D;
+  font-size:12px;
 }
 
-.footer-logo{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    font-size:20px;
-
-    font-weight:900;
-
-    margin-bottom:15px;
-
-}
-
-.footer-logo-mark{
-
-    width:36px;
-    height:36px;
-
-    border-radius:10px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    color:var(--dark);
-
-    background:
-        var(--cream);
-
-    font-weight:900;
-
-}
-
-.footer-description{
-
-    color:
-        rgba(252,242,229,.68);
-
-    font-size:12px;
-
-    line-height:1.75;
-
-}
-
-
-/* FOOTER TITLES */
-
-.footer-title{
-
-    font-size:13px;
-
-    font-weight:850;
-
-    margin-bottom:16px;
-
-    color:
-        var(--cream);
-
-}
-
-
-/* FOOTER LINKS */
-
-.footer-links{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:10px;
-
-}
-
-.footer-links a{
-
-    color:
-        rgba(252,242,229,.62);
-
-    text-decoration:none;
-
-    font-size:12px;
-
-    transition:.2s;
-
-}
-
-.footer-links a:hover{
-
-    color:
-        #ffffff;
-
-    transform:
-        translateX(2px);
-
-}
-
-
-/* CONTACT */
-
-.footer-contact{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:10px;
-
-}
-
-.footer-contact span{
-
-    color:
-        rgba(252,242,229,.62);
-
-    font-size:12px;
-
-}
-
-
-/* FOOTER BOTTOM */
-
-.footer-bottom{
-
-    max-width:1280px;
-
-    margin:auto;
-
-    padding:
-        20px 24px;
-
-    border-top:
-        1px solid
-        rgba(252,242,229,.13);
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:20px;
-
-    color:
-        rgba(252,242,229,.48);
-
-    font-size:11px;
-
-}
-
-.footer-bottom strong{
-
-    color:
-        rgba(252,242,229,.80);
-
-}
-
-
-/* =========================================================
+/* =========================
    RESPONSIVE
-   ========================================================= */
+========================= */
 
-@media(max-width:1050px){
+@media(max-width:1150px){
 
-    .tool-grid{
+  .category-grid{
+    grid-template-columns:repeat(5,1fr);
+  }
 
-        grid-template-columns:
-            repeat(3,1fr);
-
-    }
-
-    .category-grid{
-
-        grid-template-columns:
-            repeat(4,1fr);
-
-    }
-
-    .footer-main{
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-    }
+  .tool-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
 
 }
 
+@media(max-width:900px){
 
-@media(max-width:760px){
+  .category-grid{
+    grid-template-columns:repeat(4,1fr);
+  }
 
-    .header-inner{
-
-        height:64px;
-
-        padding:
-            0 16px;
-
-    }
-
-    .nav{
-
-        display:none;
-
-    }
-
-    .hero{
-
-        padding:
-            65px 18px
-            50px;
-
-    }
-
-    .hero h1{
-
-        letter-spacing:
-            -3px;
-
-    }
-
-    .hero p{
-
-        font-size:14px;
-
-    }
-
-    main{
-
-        padding:
-            0 16px
-            60px;
-
-    }
-
-    .tool-grid{
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-    }
-
-    .category-grid{
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-    }
-
-    .footer-main{
-
-        grid-template-columns:
-            1fr;
-
-        gap:30px;
-
-        padding:
-            45px 18px
-            32px;
-
-    }
-
-    .footer-bottom{
-
-        padding:
-            18px;
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
-    }
+  .tool-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
 }
 
+@media(max-width:650px){
 
-@media(max-width:430px){
+  .header-inner{
+    padding:0 18px;
+  }
 
-    .tool-grid{
+  .header-link{
+    display:none;
+  }
 
-        grid-template-columns:
-            1fr;
+  main{
+    padding:0 18px 55px;
+  }
 
-    }
+  .hero{
+    padding-top:50px;
+  }
 
-    .hero h1{
+  .hero h1{
+    font-size:45px;
+    letter-spacing:-2.5px;
+  }
 
-        font-size:50px;
+  .category-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-    }
+  .tool-grid{
+    grid-template-columns:1fr;
+  }
 
-    .category-grid{
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-    }
-
-}
-
-
-/* =========================================================
-   SUBTLE GRID
-   ========================================================= */
-
-body::before{
-
-    content:"";
-
-    position:fixed;
-
-    inset:0;
-
-    pointer-events:none;
-
-    opacity:.12;
-
-    background-image:
-
-        linear-gradient(
-            rgba(82,70,70,.08) 1px,
-            transparent 1px
-        ),
-
-        linear-gradient(
-            90deg,
-            rgba(82,70,70,.08) 1px,
-            transparent 1px
-        );
-
-    background-size:
-        50px 50px;
-
-    mask-image:
-        linear-gradient(
-            to bottom,
-            #000,
-            transparent 70%
-        );
+  .footer-inner{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+  }
 
 }
 
+@media(max-width:390px){
 
-/* =========================================================
-   END
-   ========================================================= */
+  .category-grid{
+    grid-template-columns:1fr;
+  }
 
+}
 </style>
 </head>
 
-
 <body>
 
-
-<!-- ======================================================
+<!-- =========================
      HEADER
-====================================================== -->
+========================= -->
 
 <header>
 
-<div class="header-inner">
+  <div class="header-inner">
 
-<a
-href="#"
-class="logo">
+    <a href="#" class="brand">
 
-<div class="logo-mark">
-R
-</div>
+      <div class="brand-logo">
+        <span></span>
+        <span></span>
+      </div>
 
-<div class="logo-name">
-REY <span>TOOLS</span>
-</div>
+      <div class="brand-name">
+        REY <span>TOOLS</span>
+      </div>
 
-</a>
+    </a>
 
+    <div class="header-right">
+      <button class="header-link" onclick="showAll()">
+        All Tools
+      </button>
 
-<nav class="nav">
+      <button class="header-link" onclick="showPopular()">
+        Popular
+      </button>
 
-<button
-onclick="scrollToSection('trending')">
+      <button class="header-link" onclick="showNew()">
+        New
+      </button>
+    </div>
 
-🔥 Trending
-
-</button>
-
-
-<button
-onclick="scrollToSection('popular')">
-
-⭐ Popular
-
-</button>
-
-
-<button
-onclick="scrollToSection('categories')">
-
-Categories
-
-</button>
-
-</nav>
-
-</div>
+  </div>
 
 </header>
 
 
+<main>
 
-<!-- ======================================================
+<!-- =========================
      HERO
-====================================================== -->
+========================= -->
 
 <section class="hero">
 
-<div class="hero-content">
+  <div class="hero-label">
+    <span class="hero-dot"></span>
+    Modern Web Utilities
+  </div>
+
+  <h1>
+    Simple tools.<br>
+    <span>Better workflow.</span>
+  </h1>
+
+  <p class="hero-description">
+    A collection of practical, fast and beautifully designed
+    tools for everyday digital work.
+  </p>
+
+</section>
 
 
-<div class="hero-badge">
-
-<span class="badge-dot"></span>
-
-FREE ONLINE UTILITIES
-
-</div>
-
-
-<h1>
-
-<span class="normal">REY</span>
-
-<span class="gradient">
-TOOLS
-</span>
-
-</h1>
-
-
-<p>
-
-Everything You Need. One Place.
-
-Simple, useful and fast online tools
-for everyday work, productivity,
-creativity and more.
-
-</p>
-
+<!-- =========================
+     SEARCH
+========================= -->
 
 <div class="search-wrap">
 
-<div class="search-icon">
-⌕
+  <div class="search-box">
+
+    <div class="search-icon">
+
+      <svg viewBox="0 0 24 24">
+        <circle cx="10.8" cy="10.8" r="6.5"></circle>
+        <path d="m16 16 5 5"></path>
+      </svg>
+
+    </div>
+
+    <input
+      id="searchInput"
+      type="search"
+      placeholder="Search any tool or category..."
+      autocomplete="off"
+    >
+
+  </div>
+
 </div>
 
 
-<input
-id="searchInput"
-class="search"
-type="text"
-placeholder="Search tools..."
-autocomplete="off">
+<!-- =========================
+     ALL TOOLS
+========================= -->
 
-</div>
+<section>
+
+  <div class="section-title">
+
+    <h2>ALL TOOLS</h2>
+
+    <p id="categoryStatus">
+      30 categories
+    </p>
+
+  </div>
 
 
-</div>
+  <div class="category-grid" id="categoryGrid">
+
+    <!-- 1 -->
+    <button class="category-card c-beige active"
+      data-category="Home"
+      onclick="selectCategory('Home')">
+
+      <div class="category-icon">
+
+        <svg viewBox="0 0 24 24">
+          <path d="m3 11 9-7 9 7"></path>
+          <path d="M5 10v10h14V10"></path>
+          <path d="M9 20v-6h6v6"></path>
+        </svg>
+
+      </div>
+
+      <div>
+        <div class="category-name">Home</div>
+        <span class="category-type">Overview</span>
+      </div>
+
+    </button>
+
+
+    <!-- 2 -->
+    <button class="category-card c-rose"
+      data-category="Popular"
+      onclick="selectCategory('Popular')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="m12 3 1.7 5.2H19l-4.3 3.1 1.6 5.2-4.3-3.2-4.3 3.2 1.6-5.2L5 8.2h5.3z"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Popular</div>
+        <span class="category-type">Trending</span>
+      </div>
+
+    </button>
+
+
+    <!-- 3 -->
+    <button class="category-card c-orange"
+      data-category="New Tools"
+      onclick="selectCategory('New Tools')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 3v18"></path>
+          <path d="M3 12h18"></path>
+          <path d="M5 5h14v14H5z"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">New Tools</div>
+        <span class="category-type">Latest</span>
+      </div>
+
+    </button>
+
+
+    <!-- 4 -->
+    <button class="category-card c-sage"
+      data-category="AI"
+      onclick="selectCategory('AI')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <rect x="5" y="5" width="14" height="14" rx="3"></rect>
+          <path d="M9 2v3M15 2v3M9 19v3M15 19v3"></path>
+          <path d="M2 9h3M2 15h3M19 9h3M19 15h3"></path>
+          <path d="M9 12h6M12 9v6"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">AI</div>
+        <span class="category-type">Smart</span>
+      </div>
+
+    </button>
+
+
+    <!-- 5 -->
+    <button class="category-card c-blue"
+      data-category="PDF"
+      onclick="selectCategory('PDF')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M6 3h8l4 4v14H6z"></path>
+          <path d="M14 3v5h5"></path>
+          <path d="M9 13h5M9 16h5"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">PDF</div>
+        <span class="category-type">Documents</span>
+      </div>
+
+    </button>
+
+
+    <!-- 6 -->
+    <button class="category-card c-beige"
+      data-category="Image"
+      onclick="selectCategory('Image')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+          <circle cx="8" cy="9" r="1.5"></circle>
+          <path d="m5 17 5-5 3 3 2-2 4 4"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Image</div>
+        <span class="category-type">Graphics</span>
+      </div>
+
+    </button>
+
+
+    <!-- 7 -->
+    <button class="category-card c-rose"
+      data-category="Video"
+      onclick="selectCategory('Video')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <rect x="3" y="5" width="18" height="14" rx="3"></rect>
+          <path d="m10 9 5 3-5 3z"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Video</div>
+        <span class="category-type">Media</span>
+      </div>
+
+    </button>
+
+
+    <!-- 8 -->
+    <button class="category-card c-sage"
+      data-category="Audio"
+      onclick="selectCategory('Audio')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M5 13v-2M8 16V8M11 19V5M14 16V8M17 14v-4M20 13v-2"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Audio</div>
+        <span class="category-type">Sound</span>
+      </div>
+
+    </button>
+
+
+    <!-- 9 -->
+    <button class="category-card c-blue"
+      data-category="Voice"
+      onclick="selectCategory('Voice')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <rect x="8" y="3" width="8" height="12" rx="4"></rect>
+          <path d="M5 11a7 7 0 0 0 14 0M12 18v3M8 21h8"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Voice</div>
+        <span class="category-type">Speech</span>
+      </div>
+
+    </button>
+
+
+    <!-- 10 -->
+    <button class="category-card c-gray"
+      data-category="Text"
+      onclick="selectCategory('Text')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M5 5h14M12 5v14M8 19h8"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Text</div>
+        <span class="category-type">Writing</span>
+      </div>
+
+    </button>
+
+
+    <!-- 11 -->
+    <button class="category-card c-blue"
+      data-category="Translator"
+      onclick="selectCategory('Translator')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M4 5h8M8 5v2a8 8 0 0 1-5 7"></path>
+          <path d="M5 11c2 2 4 3 7 4"></path>
+          <path d="M15 5h4l3 14M13 15h8"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Translator</div>
+        <span class="category-type">Language</span>
+      </div>
+
+    </button>
+
+
+    <!-- 12 -->
+    <button class="category-card c-orange"
+      data-category="URL"
+      onclick="selectCategory('URL')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M10 13a5 5 0 0 0 7.5.4l2-2a5 5 0 0 0-7-7l-1.2 1.2"></path>
+          <path d="M14 11a5 5 0 0 0-7.5-.4l-2 2a5 5 0 0 0 7 7l1.2-1.2"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">URL</div>
+        <span class="category-type">Web</span>
+      </div>
+
+    </button>
+
+
+    <!-- 13 -->
+    <button class="category-card c-rose"
+      data-category="QR"
+      onclick="selectCategory('QR')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+          <path d="M14 14h3v3h-3zM19 14v2M14 19h2M18 19h3v2"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">QR</div>
+        <span class="category-type">Codes</span>
+      </div>
+
+    </button>
+
+
+    <!-- 14 -->
+    <button class="category-card c-orange"
+      data-category="Barcode"
+      onclick="selectCategory('Barcode')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M4 5v14M7 5v14M10 5v14M14 5v14M17 5v14M20 5v14"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Barcode</div>
+        <span class="category-type">Codes</span>
+      </div>
+
+    </button>
+
+
+    <!-- 15 -->
+    <button class="category-card c-sage"
+      data-category="Security"
+      onclick="selectCategory('Security')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 3 20 6v6c0 5-3.3 8-8 9-4.7-1-8-4-8-9V6z"></path>
+          <path d="m9 12 2 2 4-4"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Security</div>
+        <span class="category-type">Protection</span>
+      </div>
+
+    </button>
+
+
+    <!-- 16 -->
+    <button class="category-card c-blue"
+      data-category="Developer"
+      onclick="selectCategory('Developer')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Developer</div>
+        <span class="category-type">Coding</span>
+      </div>
+
+    </button>
+
+
+    <!-- 17 -->
+    <button class="category-card c-orange"
+      data-category="Calculator"
+      onclick="selectCategory('Calculator')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <rect x="5" y="2.5" width="14" height="19" rx="2"></rect>
+          <path d="M8 6h8"></path>
+          <path d="M8 11h.1M12 11h.1M16 11h.1M8 15h.1M12 15h.1M16 15h.1"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Calculator</div>
+        <span class="category-type">Numbers</span>
+      </div>
+
+    </button>
+
+
+    <!-- 18 -->
+    <button class="category-card c-sage"
+      data-category="Finance"
+      onclick="selectCategory('Finance')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="8"></circle>
+          <path d="M14.5 8.5c-.7-.6-1.5-.9-2.5-.9-1.5 0-2.5.8-2.5 1.9 0 3 5.5 1.2 5.5 4.1 0 1.2-1.1 2-2.7 2-1 0-2-.3-2.8-1"></path>
+          <path d="M12 6v12"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Finance</div>
+        <span class="category-type">Money</span>
+      </div>
+
+    </button>
+
+
+    <!-- 19 -->
+    <button class="category-card c-blue"
+      data-category="Business"
+      onclick="selectCategory('Business')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+          <path d="M8 7V5h8v2M3 12h18"></path>
+          <path d="M10 12v3h4v-3"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Business</div>
+        <span class="category-type">Work</span>
+      </div>
+
+    </button>
+
+
+    <!-- 20 -->
+    <button class="category-card c-rose"
+      data-category="E-Commerce"
+      onclick="selectCategory('E-Commerce')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M4 5h2l2 11h9l2-8H7"></path>
+          <circle cx="10" cy="20" r="1"></circle>
+          <circle cx="17" cy="20" r="1"></circle>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">E-Commerce</div>
+        <span class="category-type">Shopping</span>
+      </div>
+
+    </button>
+
+
+    <!-- 21 -->
+    <button class="category-card c-orange"
+      data-category="Marketing"
+      onclick="selectCategory('Marketing')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M4 11h5l9-4v10l-9-4H4z"></path>
+          <path d="M9 15v4"></path>
+          <path d="M18 9c1.5 1 2 2.5 0 4"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Marketing</div>
+        <span class="category-type">Growth</span>
+      </div>
+
+    </button>
+
+
+    <!-- 22 -->
+    <button class="category-card c-rose"
+      data-category="Social Media"
+      onclick="selectCategory('Social Media')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <circle cx="6" cy="12" r="2"></circle>
+          <circle cx="18" cy="6" r="2"></circle>
+          <circle cx="18" cy="18" r="2"></circle>
+          <path d="m8 11 8-4M8 13l8 4"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Social Media</div>
+        <span class="category-type">Social</span>
+      </div>
+
+    </button>
+
+
+    <!-- 23 -->
+    <button class="category-card c-blue"
+      data-category="Date & Time"
+      onclick="selectCategory('Date & Time')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+          <path d="M7 3v4M17 3v4M3 10h18"></path>
+          <path d="M12 13v3l2 1"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Date & Time</div>
+        <span class="category-type">Time</span>
+      </div>
+
+    </button>
+
+
+    <!-- 24 -->
+    <button class="category-card c-green"
+      data-category="Converter"
+      onclick="selectCategory('Converter')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M7 7h13l-3-3M17 17H4l3 3"></path>
+          <path d="M20 7 17 4M4 17l3 3"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Converter</div>
+        <span class="category-type">Convert</span>
+      </div>
+
+    </button>
+
+
+    <!-- 25 -->
+    <button class="category-card c-beige"
+      data-category="Generator"
+      onclick="selectCategory('Generator')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="m13 2-9 12h7l-1 8 9-12h-7z"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Generator</div>
+        <span class="category-type">Create</span>
+      </div>
+
+    </button>
+
+
+    <!-- 26 -->
+    <button class="category-card c-sage"
+      data-category="Productivity"
+      onclick="selectCategory('Productivity')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <rect x="4" y="4" width="16" height="16" rx="3"></rect>
+          <path d="m8 12 2 2 5-5"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Productivity</div>
+        <span class="category-type">Workflow</span>
+      </div>
+
+    </button>
+
+
+    <!-- 27 -->
+    <button class="category-card c-blue"
+      data-category="Education"
+      onclick="selectCategory('Education')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="m3 9 9-5 9 5-9 5z"></path>
+          <path d="M7 12v5c3 2 7 2 10 0v-5"></path>
+          <path d="M21 9v6"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Education</div>
+        <span class="category-type">Learning</span>
+      </div>
+
+    </button>
+
+
+    <!-- 28 -->
+    <button class="category-card c-gray"
+      data-category="File"
+      onclick="selectCategory('File')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M4 6h6l2 2h8v11H4z"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">File</div>
+        <span class="category-type">Files</span>
+      </div>
+
+    </button>
+
+
+    <!-- 29 -->
+    <button class="category-card c-rose"
+      data-category="Career"
+      onclick="selectCategory('Career')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="8" r="3"></circle>
+          <path d="M5 21a7 7 0 0 1 14 0"></path>
+          <path d="M16 5h4v4"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Career</div>
+        <span class="category-type">Professional</span>
+      </div>
+
+    </button>
+
+
+    <!-- 30 -->
+    <button class="category-card c-orange"
+      data-category="Design"
+      onclick="selectCategory('Design')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="m14 4 6 6-10 10H4v-6z"></path>
+          <path d="m12 6 6 6"></path>
+          <path d="M4 20h16"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Design</div>
+        <span class="category-type">Creative</span>
+      </div>
+
+    </button>
+
+
+    <!-- 31st visual category? -->
+    <!-- Background is intentionally included below -->
+
+    <button class="category-card c-sage"
+      data-category="Background"
+      onclick="selectCategory('Background')">
+
+      <div class="category-icon">
+        <svg viewBox="0 0 24 24">
+          <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+          <path d="m5 17 5-5 3 3 3-4 3 6"></path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="category-name">Background</div>
+        <span class="category-type">Visual</span>
+      </div>
+
+    </button>
+
+  </div>
 
 </section>
 
 
+<!-- =========================
+     TOOLS
+========================= -->
 
-<!-- ======================================================
-     MAIN
-====================================================== -->
+<section class="tools-section">
 
-<main>
+  <div class="section-title">
 
+    <h2 id="toolsTitle">Popular Tools</h2>
 
-<!-- TRENDING -->
+    <p id="toolCount">
+      12 tools
+    </p>
 
-<section
-class="section"
-id="trending">
-
-<div class="section-header">
-
-<div>
-
-<div class="section-title">
-
-🔥 Trending Tools
-
-</div>
-
-<div class="section-sub">
-
-Popular tools people use frequently
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 
-<div
-class="tool-grid"
-id="trendingGrid">
+  <div class="tool-grid" id="toolGrid">
 
-</div>
+
+    <!-- QR -->
+    <a class="tool-card"
+       data-category="QR"
+       data-popular="true"
+       data-new="false"
+       href="#">
+
+      <div class="tool-top">
+
+        <div class="tool-icon i-rose">
+
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+            <path d="M14 14h3v3h-3zM19 14v2M14 19h2M18 19h3v2"></path>
+          </svg>
+
+        </div>
+
+        <span class="tool-arrow">↗</span>
+
+      </div>
+
+      <div class="tool-info">
+        <h3>QR Generator</h3>
+        <p>Create QR codes for links, text and contact data.</p>
+      </div>
+
+    </a>
+
+
+    <!-- PDF -->
+    <a class="tool-card"
+       data-category="PDF"
+       data-popular="true"
+       data-new="false"
+       href="#">
+
+      <div class="tool-top">
+
+        <div class="tool-icon i-blue">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M6 3h8l4 4v14H6z"></path>
+            <path d="M14 3v5h5"></path>
+            <path d="M9 13h5M9 16h5"></path>
+          </svg>
+
+        </div>
+
+        <span class="tool-arrow">↗</span>
+
+      </div>
+
+      <div class="tool-info">
+        <h3>PDF Merge</h3>
+        <p>Combine multiple PDF files into one document.</p>
+      </div>
+
+    </a>
+
+
+    <!-- Image -->
+    <a class="tool-card"
+       data-category="Image"
+       data-popular="true"
+       data-new="true"
+       href="#">
+
+      <div class="tool-top">
+
+        <div class="tool-icon i-sage">
+
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+            <circle cx="8" cy="9" r="1.5"></circle>
+            <path d="m5 17 5-5 3 3 2-2 4 4"></path>
+          </svg>
+
+        </div>
+
+        <span class="tool-arrow">↗</span>
+
+      </div>
+
+      <div class="tool-info">
+        <h3>Image Resizer</h3>
+        <p>Resize images quickly for web and social media.</p>
+      </div>
+
+    </a>
+
+
+    <!-- AI -->
+    <a class="tool-card"
+       data-category="AI"
+       data-popular="true"
+       data-new="true"
+       href="#">
+
+      <div class="tool-top">
+
+        <div class="tool-icon i-rose">
+
+          <svg viewBox="0 0 24 24">
+            <rect x="5" y="5" width="14" height="14" rx="3"></rect>
+            <path d="M9 2v3M15 2v3M9 19v3M15 19v3"></path>
+            <path d="M2 9h3M2 15h3M19 9h3M19 15h3"></path>
+            <path d="M9 12h6M12 9v6"></path>
+          </svg>
+
+        </div>
+
+        <span class="tool-arrow">↗</span>
+
+      </div>
+
+      <div class="tool-info">
+        <h3>AI Prompt Generator</h3>
+        <p>Generate structured prompts for different AI tasks.</p>
+      </div>
+
+    </a>
+
+
+    <!-- Calculator -->
+    <a class="tool-card"
+       data-category="Calculator"
+       data-popular="true"
+       data-new="false"
+       href="#">
+
+      <div class="tool-top">
+
+        <div class="tool-icon i-orange">
+
+          <svg viewBox="0 0 24 24">
+            <rect x="5" y="2.5" width="14" height="19" rx="2"></rect>
+            <path d="M8 6h8"></path>
+            <path d="M8 11h.1M12 11h.1M16 11h.1M8 15h.1M12 15h.1M16 15h.1"></path>
+          </svg>
+
+        </div>
+
+        <span class="tool-arrow">↗</span>
+
+      </div>
+
+      <div class="tool-info">
+        <h3>Percentage Calculator</h3>
+        <p>Calculate percentages, increases and decreases.</p>
+      </div>
+
+    </a>
+
+
+    <!-- Converter -->
+    <a class="tool-card"
+       data-category="Converter"
+       data-popular="true"
+       data-new="true"
+       href="#">
+
+      <div class="tool-top">
+
+        <div class="tool-icon i-sage">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M7 7h13l-3-3M17 17H4l3 3"></path>
+          </svg>
+
+        </div>
+
+        <span class="tool-arrow">↗</span>
+
+      </div>
+
+      <div class="tool-info">
+        <h3>Unit Converter</h3>
+        <p>Convert length, weight, temperature and more.</p>
+      </div>
+
+    </a>
+
+
+    <!-- Text -->
+    <a class="tool-card"
+       data-category="Text"
+       data-popular="false"
+       data-new="true"
+       href="#">
+
+      <div class="tool-top">
+
+        <div class="tool-icon i-blue">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M5 5h14M12 5v14M8 19h8"></path>
+          </svg>
+
+        </div>
+
+        <span class="tool-arrow">↗</span>
+
+      </div>
+
+      <div class="tool-info">
+        <h3>Text Formatter</h3>
+        <p>Clean, format and transform text instantly.</p>
+      </div>
+
+    </a>
+
+
+    <!-- Developer -->
+    <a class="tool-card"
+       data-category="Developer"
+       data-popular="true"
+       data-new="false"
+       href="#">
+
+      <div class="tool-top">
+
+        <div class="tool-icon i-orange">
+
+          <svg viewBox="0 0 24 24">
+            <path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"></path>
+          </svg>
+
+        </div>
+
+        <span class="tool-arrow">↗</span>
+
+      </div>
+
+      <div class="tool-info">
+        <h3>JSON Formatter</h3>
+        <p>Format, validate and inspect JSON data.</p>
+      </div>
+
+    </a>
+
+
+    <!-- Security -->
+    <a class="tool-card"
+       data-category="Security"
+       data-popular="false"
+       data-new="true"
+       href="#">
+
+      <div class="tool-top">
+
+        <div class="tool-icon i-sage">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3 20 6v6c0 5-3.3 8-8 9-4.7-1-8-4-8-9V6z"></path>
+            <path d="m9 12 2 2 4-4"></path>
+          </svg>
+
+        </div>
+
+        <span class="tool-arrow">↗</span>
+
+      </div>
+
+      <div class="tool-info">
+        <h3>Password Generator</h3>
+        <p>Create strong random passwords securely.</p>
+      </div>
+
+    </a>
+
+
+    <!-- URL -->
+    <a class="tool-card"
+       data-category="URL"
+       data-popular="false"
+       data-new="false"
+       href="#">
+
+      <div class="tool-top">
+
+        <div class="tool-icon i-blue">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M10 13a5 5 0 0 0 7.5.4l2-2a5 5 0 0 0-7-7l-1.2 1.2"></path>
+            <path d="M14 11a5 5 0 0 0-7.5-.4l-2 2a5 5 0 0 0 7 7l1.2-1.2"></path>
+          </svg>
+
+        </div>
+
+        <span class="tool-arrow">↗</span>
+
+      </div>
+
+      <div class="tool-info">
+        <h3>URL Encoder</h3>
+        <p>Encode and decode URLs and web components.</p>
+      </div>
+
+    </a>
+
+
+    <!-- Date -->
+    <a class="tool-card"
+       data-category="Date & Time"
+       data-popular="false"
+       data-new="true"
+       href="#">
+
+      <div class="tool-top">
+
+        <div class="tool-icon i-rose">
+
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+            <path d="M7 3v4M17 3v4M3 10h18"></path>
+            <path d="M12 13v3l2 1"></path>
+          </svg>
+
+        </div>
+
+        <span class="tool-arrow">↗</span>
+
+      </div>
+
+      <div class="tool-info">
+        <h3>Date Calculator</h3>
+        <p>Calculate dates, durations and differences.</p>
+      </div>
+
+    </a>
+
+  </div>
+
+
+  <div class="no-results" id="noResults">
+    No tools found.
+  </div>
 
 </section>
-
-
-
-<!-- POPULAR -->
-
-<section
-class="section"
-id="popular">
-
-<div class="section-header">
-
-<div>
-
-<div class="section-title">
-
-⭐ Popular Tools
-
-</div>
-
-<div class="section-sub">
-
-Useful everyday utilities
-
-</div>
-
-</div>
-
-</div>
-
-
-<div
-class="tool-grid"
-id="popularGrid">
-
-</div>
-
-</section>
-
-
-
-<!-- NEW -->
-
-<section
-class="section">
-
-<div class="section-header">
-
-<div>
-
-<div class="section-title">
-
-🆕 New Tools
-
-</div>
-
-<div class="section-sub">
-
-Recently added utilities
-
-</div>
-
-</div>
-
-</div>
-
-
-<div
-class="tool-grid"
-id="newGrid">
-
-</div>
-
-</section>
-
-
-
-<!-- CATEGORIES -->
-
-<section
-class="section"
-id="categories">
-
-<div class="section-header">
-
-<div>
-
-<div class="section-title">
-
-Explore Categories
-
-</div>
-
-<div class="section-sub">
-
-Find the right tool for your task
-
-</div>
-
-</div>
-
-</div>
-
-
-<div
-class="category-filter"
-id="filters">
-
-</div>
-
-
-<div
-class="category-grid"
-id="categoryGrid">
-
-</div>
-
-</section>
-
-
-
-<!-- SEARCH -->
-
-<section
-class="section"
-id="searchSection">
-
-<div class="section-header">
-
-<div>
-
-<div class="section-title">
-
-🔎 Search Results
-
-</div>
-
-<div
-class="section-sub"
-id="resultCount">
-
-</div>
-
-</div>
-
-</div>
-
-
-<div
-class="tool-grid"
-id="searchGrid">
-
-</div>
-
-
-<div
-class="empty"
-id="emptyState">
-
-<div class="empty-icon">
-⌕
-</div>
-
-No matching tools found.
-
-</div>
-
-</section>
-
 
 </main>
 
 
-
-<!-- ======================================================
+<!-- =========================
      FOOTER
-====================================================== -->
+========================= -->
 
 <footer>
 
+  <div class="footer-inner">
 
-<div class="footer-main">
+    <p>
+      © 2026 REY TOOLS
+    </p>
 
+    <p>
+      Simple tools. Better workflow.
+    </p>
 
-<!-- ABOUT -->
-
-<div class="footer-brand">
-
-<div class="footer-logo">
-
-<div class="footer-logo-mark">
-R
-</div>
-
-REY TOOLS
-
-</div>
-
-
-<div class="footer-description">
-
-REY TOOLS is a simple and useful online
-utility platform created to make everyday
-tasks easier.
-
-From productivity and creativity to
-development, file management and
-everyday utilities — everything is brought
-together in one place.
-
-Everything You Need. One Place.
-
-</div>
-
-</div>
-
-
-
-<!-- QUICK LINKS -->
-
-<div>
-
-<div class="footer-title">
-Quick Links
-</div>
-
-<div class="footer-links">
-
-<a href="#">
-Home
-</a>
-
-<a href="#trending">
-Trending Tools
-</a>
-
-<a href="#popular">
-Popular Tools
-</a>
-
-<a href="#categories">
-Categories
-</a>
-
-<a href="#">
-All Tools
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- INFORMATION -->
-
-<div>
-
-<div class="footer-title">
-Information
-</div>
-
-<div class="footer-links">
-
-<a href="#">
-About REY TOOLS
-</a>
-
-<a href="#">
-Contact
-</a>
-
-<a href="#">
-FAQ
-</a>
-
-<a href="#">
-Report an Issue
-</a>
-
-<a href="#">
-Suggest a Tool
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- LEGAL -->
-
-<div>
-
-<div class="footer-title">
-Legal & Privacy
-</div>
-
-<div class="footer-links">
-
-<a href="#">
-Privacy Policy
-</a>
-
-<a href="#">
-Terms of Use
-</a>
-
-<a href="#">
-Disclaimer
-</a>
-
-<a href="#">
-Cookie Policy
-</a>
-
-<a href="#">
-Security
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-
-
-
-<div class="footer-bottom">
-
-
-<div>
-
-© 2026
-<strong>
-REY TOOLS
-</strong>.
-
-All rights reserved.
-
-</div>
-
-
-<div>
-
-Built for simple,
-useful and better tools.
-
-</div>
-
-
-</div>
-
+  </div>
 
 </footer>
 
 
-
-<!-- ======================================================
-     JAVASCRIPT
-====================================================== -->
-
 <script>
 
+/* =========================
+   ELEMENTS
+========================= */
 
-/* ======================================================
-   TOOL DATABASE
-====================================================== */
+const categoryCards =
+  [...document.querySelectorAll(".category-card")];
 
-const tools = [
+const toolCards =
+  [...document.querySelectorAll(".tool-card")];
 
+const searchInput =
+  document.getElementById("searchInput");
 
-/* ================= TRENDING ================= */
+const toolsTitle =
+  document.getElementById("toolsTitle");
 
-{
-name:"QR Code Generator",
-icon:"▦",
-category:"QR & Barcode",
-desc:"Create QR codes from text, links and more.",
-type:"Trending",
-color:"orange"
-},
+const toolCount =
+  document.getElementById("toolCount");
 
-{
-name:"Password Generator",
-icon:"⌁",
-category:"Security",
-desc:"Generate strong random passwords.",
-type:"Trending",
-color:"red"
-},
+const categoryStatus =
+  document.getElementById("categoryStatus");
 
-{
-name:"Image Compressor",
-icon:"◫",
-category:"Image",
-desc:"Reduce image file size quickly.",
-type:"Trending",
-color:"orange"
-},
-
-{
-name:"JSON Formatter",
-icon:"{ }",
-category:"Developer",
-desc:"Format and inspect JSON data.",
-type:"Trending",
-color:"purple"
-},
-
-{
-name:"Word Counter",
-icon:"Aa",
-category:"Text",
-desc:"Count words, characters and lines.",
-type:"Trending",
-color:"yellow"
-},
-
-{
-name:"Color Picker",
-icon:"◉",
-category:"Color",
-desc:"Pick and inspect colors.",
-type:"Trending",
-color:"purple"
-},
-
-{
-name:"Unit Converter",
-icon:"↔",
-category:"Converter",
-desc:"Convert common units instantly.",
-type:"Trending",
-color:"yellow"
-},
-
-{
-name:"PDF Merger",
-icon:"▤",
-category:"PDF",
-desc:"Combine multiple PDF documents.",
-type:"Trending",
-color:"orange"
-},
+const noResults =
+  document.getElementById("noResults");
 
 
-/* ================= POPULAR ================= */
+/* =========================
+   STATE
+========================= */
 
-{
-name:"Calculator",
-icon:"＋",
-category:"Calculator",
-desc:"Fast and simple online calculator.",
-type:"Popular",
-color:"purple"
-},
-
-{
-name:"Age Calculator",
-icon:"◷",
-category:"Date & Time",
-desc:"Calculate exact age from birth date.",
-type:"Popular",
-color:"yellow"
-},
-
-{
-name:"Percentage Calculator",
-icon:"%",
-category:"Math",
-desc:"Calculate percentages instantly.",
-type:"Popular",
-color:"purple"
-},
-
-{
-name:"Image Resizer",
-icon:"↕",
-category:"Image",
-desc:"Resize images to custom dimensions.",
-type:"Popular",
-color:"orange"
-},
-
-{
-name:"Text Case Converter",
-icon:"Aa",
-category:"Text",
-desc:"Convert text between different cases.",
-type:"Popular",
-color:"purple"
-},
-
-{
-name:"Base64 Encoder",
-icon:"64",
-category:"Developer",
-desc:"Encode text into Base64 format.",
-type:"Popular",
-color:"purple"
-},
-
-{
-name:"URL Encoder",
-icon:"↗",
-category:"Web",
-desc:"Encode and decode URLs.",
-type:"Popular",
-color:"yellow"
-},
-
-{
-name:"Timestamp Converter",
-icon:"◷",
-category:"Developer",
-desc:"Convert Unix timestamps easily.",
-type:"Popular",
-color:"yellow"
-},
+let currentMode = "Home";
+let currentSearch = "";
 
 
-/* ================= NEW ================= */
+/* =========================
+   CATEGORY SELECT
+========================= */
 
-{
-name:"Lorem Ipsum Generator",
-icon:"Aa",
-category:"Writing",
-desc:"Generate placeholder text instantly.",
-type:"New",
-color:"purple"
-},
+function selectCategory(category){
 
-{
-name:"Random Number Generator",
-icon:"#",
-category:"Generators",
-desc:"Generate random numbers within a range.",
-type:"New",
-color:"orange"
-},
+  currentMode = category;
 
-{
-name:"Slug Generator",
-icon:"↗",
-category:"SEO",
-desc:"Create clean SEO-friendly URL slugs.",
-type:"New",
-color:"yellow"
-},
+  categoryCards.forEach(card => {
 
-{
-name:"Text Cleaner",
-icon:"✦",
-category:"Text",
-desc:"Clean spaces and unnecessary line breaks.",
-type:"New",
-color:"red"
+    card.classList.toggle(
+      "active",
+      card.dataset.category === category
+    );
+
+  });
+
+  searchInput.value = "";
+  currentSearch = "";
+
+  renderTools();
+
+  document.querySelector(".tools-section")
+    .scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
 }
 
-];
 
+/* =========================
+   QUICK FILTERS
+========================= */
 
+function showAll(){
 
-/* ======================================================
-   30 CATEGORIES
-====================================================== */
-
-const categories = [
-
-["AI & Chat","AI"],
-["Image","IMG"],
-["PDF","PDF"],
-["Video","VID"],
-["Audio","AUD"],
-["File","FILE"],
-["Text","TXT"],
-["Developer","DEV"],
-["Calculator","CAL"],
-["Converter","CONV"],
-["Finance","$"],
-["Productivity","PRO"],
-["SEO","SEO"],
-["Social Media","SOC"],
-["Design","DES"],
-["Color","CLR"],
-["QR & Barcode","QR"],
-["Security","SEC"],
-["Web","WEB"],
-["Education","EDU"],
-["Writing","WR"],
-["Date & Time","TIME"],
-["Math","MATH"],
-["Health & Fitness","FIT"],
-["Business","BIZ"],
-["Marketing","MKT"],
-["Data","DATA"],
-["Generators","GEN"],
-["Utilities","UTIL"],
-["More Tools","+"]
-
-];
-
-
-
-/* ======================================================
-   CREATE TOOL CARD
-====================================================== */
-
-function createCard(tool){
-
-return `
-
-<div
-class="tool-card ${tool.color}"
-data-name="${tool.name.toLowerCase()}"
-data-category="${tool.category.toLowerCase()}">
-
-
-<div class="tool-icon">
-
-${tool.icon}
-
-</div>
-
-
-<div class="tool-name">
-
-${tool.name}
-
-</div>
-
-
-<div class="tool-desc">
-
-${tool.desc}
-
-</div>
-
-
-<div class="tool-footer">
-
-<span class="tag">
-
-${tool.category}
-
-</span>
-
-
-<span>
-
-Open →
-
-</span>
-
-</div>
-
-
-</div>
-
-`;
+  selectCategory("Home");
 
 }
 
 
+function showPopular(){
 
-/* ======================================================
-   RENDER TOOLS
-====================================================== */
+  selectCategory("Popular");
+
+}
+
+
+function showNew(){
+
+  selectCategory("New Tools");
+
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+searchInput.addEventListener(
+  "input",
+  function(){
+
+    currentSearch =
+      this.value
+        .toLowerCase()
+        .trim();
+
+    renderTools();
+
+  }
+);
+
+
+/* =========================
+   RENDER
+========================= */
 
 function renderTools(){
 
+  let visible = 0;
 
-document
-.getElementById("trendingGrid")
-.innerHTML =
+  toolCards.forEach(card => {
 
-tools
+    const category =
+      card.dataset.category;
 
-.filter(
-tool =>
-tool.type === "Trending"
-)
+    const name =
+      card.querySelector("h3")
+        .textContent
+        .toLowerCase();
 
-.map(createCard)
+    const description =
+      card.querySelector("p")
+        .textContent
+        .toLowerCase();
 
-.join("");
+    const matchesSearch =
+      !currentSearch ||
+      name.includes(currentSearch) ||
+      description.includes(currentSearch) ||
+      category.toLowerCase()
+        .includes(currentSearch);
 
-
-
-document
-.getElementById("popularGrid")
-.innerHTML =
-
-tools
-
-.filter(
-tool =>
-tool.type === "Popular"
-)
-
-.map(createCard)
-
-.join("");
+    let matchesMode = true;
 
 
+    /* Home */
 
-document
-.getElementById("newGrid")
-.innerHTML =
+    if(currentMode === "Home"){
 
-tools
+      matchesMode = true;
 
-.filter(
-tool =>
-tool.type === "New"
-)
+      toolsTitle.textContent =
+        "Popular Tools";
 
-.map(createCard)
-
-.join("");
-
-}
+    }
 
 
+    /* Popular */
 
-/* ======================================================
-   RENDER CATEGORIES
-====================================================== */
+    else if(currentMode === "Popular"){
 
-function renderCategories(){
+      matchesMode =
+        card.dataset.popular === "true";
 
+      toolsTitle.textContent =
+        "Popular Tools";
 
-const grid =
-document.getElementById(
-"categoryGrid"
-);
-
-
-grid.innerHTML =
-
-categories
-
-.map(category => `
-
-<div
-class="category"
-onclick="filterCategory('${category[0]}')">
+    }
 
 
-<div class="category-icon">
+    /* New */
 
-${category[1]}
+    else if(currentMode === "New Tools"){
 
-</div>
+      matchesMode =
+        card.dataset.new === "true";
 
+      toolsTitle.textContent =
+        "New Tools";
 
-<div class="category-name">
-
-${category[0]}
-
-</div>
-
-
-</div>
-
-`)
-
-.join("");
+    }
 
 
+    /* Category */
 
-const filters =
-document.getElementById(
-"filters"
-);
+    else{
 
+      matchesMode =
+        category === currentMode;
 
-filters.innerHTML = `
+      toolsTitle.textContent =
+        currentMode + " Tools";
 
-<button
-class="filter active"
-onclick="filterCategory('All',this)">
-
-All
-
-</button>
-
-`;
+    }
 
 
-filters.innerHTML +=
+    const visibleCard =
+      matchesSearch && matchesMode;
 
-categories
+    card.style.display =
+      visibleCard ? "flex" : "none";
 
-.map(category => `
+    if(visibleCard){
+      visible++;
+    }
 
-<button
-class="filter"
-onclick="filterCategory('${category[0]}',this)">
+  });
 
-${category[0]}
 
-</button>
+  toolCount.textContent =
+    `${visible} ${visible === 1 ? "tool" : "tools"}`;
 
-`)
 
-.join("");
+  categoryStatus.textContent =
+    currentSearch
+      ? `Searching: "${currentSearch}"`
+      : `${categoryCards.length} categories`;
+
+
+  noResults.classList.toggle(
+    "show",
+    visible === 0
+  );
 
 }
 
 
-
-/* ======================================================
-   FILTER
-====================================================== */
-
-function filterCategory(
-category,
-button
-){
-
-
-if(button){
-
-document
-.querySelectorAll(".filter")
-.forEach(
-btn =>
-btn.classList.remove("active")
-);
-
-button.classList.add("active");
-
-}
-
-
-
-const cards =
-document.querySelectorAll(
-".tool-card"
-);
-
-
-cards.forEach(card => {
-
-
-if(category === "All"){
-
-card.style.display = "";
-
-return;
-
-}
-
-
-card.style.display =
-
-card.dataset.category ===
-category.toLowerCase()
-
-? ""
-
-: "none";
-
-
-});
-
-}
-
-
-
-/* ======================================================
-   SEARCH
-====================================================== */
-
-const searchInput =
-document.getElementById(
-"searchInput"
-);
-
-
-searchInput.addEventListener(
-"input",
-function(){
-
-
-const query =
-this.value
-.trim()
-.toLowerCase();
-
-
-const section =
-document.getElementById(
-"searchSection"
-);
-
-
-const grid =
-document.getElementById(
-"searchGrid"
-);
-
-
-const empty =
-document.getElementById(
-"emptyState"
-);
-
-
-const count =
-document.getElementById(
-"resultCount"
-);
-
-
-
-if(!query){
-
-section.style.display =
-"none";
-
-return;
-
-}
-
-
-
-section.style.display =
-"block";
-
-
-
-const results =
-
-tools.filter(tool =>
-
-tool.name
-.toLowerCase()
-.includes(query)
-
-||
-
-tool.category
-.toLowerCase()
-.includes(query)
-
-||
-
-tool.desc
-.toLowerCase()
-.includes(query)
-
-);
-
-
-
-count.textContent =
-
-results.length +
-
-(
-results.length === 1
-
-? " tool found"
-
-: " tools found"
-
-);
-
-
-
-if(!results.length){
-
-grid.innerHTML = "";
-
-empty.style.display =
-"block";
-
-}
-
-else{
-
-empty.style.display =
-"none";
-
-grid.innerHTML =
-
-results
-.map(createCard)
-.join("");
-
-}
-
-
-});
-
-
-
-/* ======================================================
-   SCROLL
-====================================================== */
-
-function scrollToSection(id){
-
-document
-.getElementById(id)
-.scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-}
-
-
-
-/* ======================================================
-   INITIALIZE
-====================================================== */
+/* =========================
+   INITIAL
+========================= */
 
 renderTools();
-
-renderCategories();
-
 
 </script>
 

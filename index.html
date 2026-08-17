@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="REY TOOLS — a collection of fast, practical and beautifully designed online tools for everyday digital work.">
+<meta name="description" content="REY TOOLS — A Collection Of Fast, Practical And Beautifully Designed Online Tools For Everyday Digital Work.">
 <meta name="theme-color" content="#222222">
 <title>REY TOOLS — Modern Web Utilities</title>
 
@@ -14,12 +14,13 @@
   --text:#252525;
   --muted:#77736D;
   --line:#DDD8CF;
-  --rose:#D9A7B0;
-  --orange:#D9A06F;
-  --blue:#9FBBC7;
-  --sage:#9EB9AA;
-  --gray:#B8B7B0;
-  --beige:#E8E1D6;
+  --red:#C96B72;
+  --yellow:#C9B45C;
+  --orange:#D18A5B;
+  --blue:#7199B5;
+  --green:#78A681;
+  --indigo:#777FAE;
+  --violet:#9A78A7;
   --dark:#222222;
   --shadow:0 10px 30px rgba(40,35,30,.07);
 }
@@ -98,12 +99,7 @@ main{max-width:1400px;margin:auto;padding:0 28px 70px}
 }
 .category-name{font-size:13px;font-weight:800}
 .category-type{display:block;margin-top:3px;font-size:10px;opacity:.62}
-.c-rose{background:var(--rose);color:#5A3941}
-.c-orange{background:var(--orange);color:#5A3D29}
-.c-blue{background:var(--blue);color:#304A55}
-.c-sage{background:var(--sage);color:#354D42}
-.c-gray{background:var(--gray);color:#44433F}
-.c-beige{background:var(--beige);color:#514A42}
+.c-red{background:var(--red);color:#fff}.c-orange{background:var(--orange);color:#fff}.c-yellow{background:var(--yellow);color:#222}.c-green{background:var(--green);color:#fff}.c-blue{background:var(--blue);color:#fff}.c-indigo{background:var(--indigo);color:#fff}.c-violet{background:var(--violet);color:#fff}
 .tool-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
 .tool-card{
   min-height:86px;background:var(--paper);border:1px solid var(--line);border-radius:12px;
@@ -157,8 +153,8 @@ footer{background:var(--dark);color:#F5F3EE;margin-top:30px}
 }
 @media(max-width:900px){
   .category-grid{grid-template-columns:repeat(4,1fr)}
-  .tool-grid{grid-template-columns:repeat(3,1fr)}
-  .footer-grid{grid-template-columns:repeat(2,1fr)}
+  .tool-grid{grid-template-columns:repeat(4,1fr)}
+  .footer-grid{grid-template-columns:repeat(3,1fr)}
 }
 @media(max-width:650px){
   .header-inner{padding:0 18px}.header-link{display:none}
@@ -282,41 +278,41 @@ footer{background:var(--dark);color:#F5F3EE;margin-top:30px}
 ========================================================= */
 
 const categoryInfo = [
-  ["AI","Smart","c-sage","ai"],
-  ["PDF","Documents","c-blue","pdf"],
-  ["Image","Graphics","c-beige","image"],
-  ["Video","Media","c-rose","video"],
-  ["Audio","Sound","c-sage","audio"],
-  ["Voice","Speech","c-blue","voice"],
-  ["Text","Writing","c-gray","text"],
-  ["Translator","Language","c-blue","translator"],
+  ["AI","Smart","c-red","ai"],
+  ["PDF","Documents","c-orange","pdf"],
+  ["Image","Graphics","c-yellow","image"],
+  ["Video","Media","c-green","video"],
+  ["Audio","Sound","c-blue","audio"],
+  ["Voice","Speech","c-indigo","voice"],
+  ["Text","Writing","c-violet","text"],
+  ["Translator","Language","c-red","translator"],
   ["URL","Web","c-orange","url"],
-  ["QR","Codes","c-rose","qr"],
-  ["Barcode","Codes","c-orange","barcode"],
-  ["Security","Protection","c-sage","security"],
-  ["Developer","Coding","c-blue","developer"],
-  ["Calculator","Numbers","c-orange","calculator"],
-  ["Finance","Money","c-sage","finance"],
-  ["Business","Work","c-blue","business"],
-  ["E-Commerce","Shopping","c-rose","ecommerce"],
-  ["Marketing","Growth","c-orange","marketing"],
-  ["Social Media","Social","c-rose","social"],
-  ["Date & Time","Time","c-blue","datetime"],
-  ["Converter","Convert","c-sage","converter"],
-  ["Generator","Create","c-beige","generator"],
-  ["Productivity","Workflow","c-sage","productivity"],
-  ["Education","Learning","c-blue","education"],
-  ["File","Files","c-gray","file"],
-  ["Career","Professional","c-rose","career"],
-  ["Design","Creative","c-orange","design"],
-  ["Background","Visual","c-sage","background"],
-  ["Documents","Documents","c-beige","documents"],
-  ["Data","Data","c-blue","data"]
+  ["QR","Codes","c-yellow","qr"],
+  ["Barcode","Codes","c-green","barcode"],
+  ["Security","Protection","c-blue","security"],
+  ["Developer","Coding","c-indigo","developer"],
+  ["Calculator","Numbers","c-violet","calculator"],
+  ["Finance","Money","c-red","finance"],
+  ["Business","Work","c-orange","business"],
+  ["E-Commerce","Shopping","c-yellow","ecommerce"],
+  ["Marketing","Growth","c-green","marketing"],
+  ["Social Media","Social","c-blue","social"],
+  ["Date & Time","Time","c-indigo","datetime"],
+  ["Converter","Convert","c-violet","converter"],
+  ["Generator","Create","c-red","generator"],
+  ["Productivity","Workflow","c-orange","productivity"],
+  ["Education","Learning","c-yellow","education"],
+  ["File","Files","c-green","file"],
+  ["Career","Professional","c-blue","career"],
+  ["Design","Creative","c-indigo","design"],
+  ["Background","Visual","c-violet","background"],
+  ["Documents","Documents","c-red","documents"],
+  ["Data","Data","c-orange","data"],
 ];
 
 const toolNames = {
 "AI":["AI Prompt Generator","AI Text Generator","AI Summarizer","AI Rewriter","AI Translator","AI Email Writer","AI Title Generator","AI Idea Generator","AI Content Improver","AI Prompt Optimizer"],
-"PDF":["PDF Merge","PDF Excel","PDF Compress","PDF Rotate","PDF Unlock","PDF Protect","PDF to JPG","JPG to PDF","PDF to PNG","PDF Page Extractor"],
+"PDF":["PDF Merge","PDF Split","PDF Compress","PDF Rotate","PDF Unlock","PDF Protect","PDF to JPG","JPG to PDF","PDF to PNG","PDF Page Extractor"],
 "Image":["Image Compressor","Image Resizer","Image Cropper","Image Converter","Image Rotator","Image Flipper","Image Watermark","Image Color Picker","Image to Base64","Base64 to Image"],
 "Video":["Video Compressor","Video Converter","Video Resizer","Video Trimmer","Video Cropper","Video Rotator","Video to GIF","GIF to Video","Video to MP3","Video Thumbnail Maker"],
 "Audio":["Audio Converter","Audio Compressor","Audio Trimmer","Audio Merger","Audio Volume Booster","Audio Normalizer","MP3 Cutter","WAV Converter","Audio Speed Changer","Audio Metadata Editor"],

@@ -4,31 +4,55 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>REY TOOLS — Online Tools</title>
+<title>REY TOOLS — Everything You Need. One Place.</title>
 
 <meta name="description"
-content="REY TOOLS — Online Tools for Work, Business, Documents & Daily Life In One Place.">
+content="REY TOOLS is a collection of simple, useful and free online tools for everyday work, productivity, creativity and more.">
+
+<meta name="theme-color" content="#6d28d9">
 
 <style>
+
 :root{
-    --bg:#06111f;
-    --bg2:#081827;
-    --panel:#0b1c2e;
-    --panel2:#0e2339;
-    --blue:#1683ff;
-    --blue2:#38bdf8;
-    --text:#f3f8ff;
-    --muted:#8da5bd;
-    --border:#173653;
-    --border2:#214b70;
-    --shadow:0 18px 50px rgba(0,0,0,.25);
+    --bg:#f7f8fc;
+    --surface:#ffffff;
+    --surface-soft:#fafaff;
+
+    --text:#171522;
+    --muted:#747383;
+
+    --purple:#6d28d9;
+    --purple2:#8b5cf6;
+    --purple-soft:#f1eaff;
+
+    --orange:#f97316;
+    --orange-soft:#fff1e8;
+
+    --yellow:#eab308;
+    --yellow-soft:#fff9df;
+
+    --red:#ef4444;
+    --red-soft:#fff0f0;
+
+    --blue:#2563eb;
+    --blue-soft:#edf4ff;
+
+    --border:#e8e8ef;
+
+    --shadow:0 12px 35px rgba(36,25,70,.07);
+    --shadow-hover:0 20px 45px rgba(55,35,110,.13);
+
     --radius:18px;
 }
 
+/* =========================
+   RESET
+========================= */
+
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 html{
@@ -38,32 +62,60 @@ html{
 body{
     font-family:
         Inter,
+        -apple-system,
+        BlinkMacSystemFont,
         "Segoe UI",
+        Roboto,
         Arial,
         sans-serif;
-    background:
-        radial-gradient(circle at 50% -10%,rgba(22,131,255,.14),transparent 35%),
-        linear-gradient(180deg,var(--bg),#040c15);
+
     color:var(--text);
+    background:
+
+        radial-gradient(
+            circle at 10% 0%,
+            rgba(139,92,246,.10),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(249,115,22,.08),
+            transparent 25%
+        ),
+
+        var(--bg);
+
     min-height:100vh;
 }
 
-/* ================= HEADER ================= */
+button,
+input{
+    font:inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
 
 header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(6,17,31,.82);
+
+    background:rgba(255,255,255,.88);
     backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(35,76,111,.45);
+
+    border-bottom:1px solid rgba(220,220,230,.75);
 }
 
-.header{
+.header-inner{
     max-width:1280px;
-    margin:auto;
     height:72px;
+
+    margin:auto;
     padding:0 24px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -73,23 +125,33 @@ header{
     display:flex;
     align-items:center;
     gap:11px;
-    text-decoration:none;
+
     color:var(--text);
+    text-decoration:none;
 }
 
 .logo-mark{
-    width:38px;
-    height:38px;
-    border:1px solid rgba(56,189,248,.45);
+    width:39px;
+    height:39px;
+
     border-radius:12px;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    background:linear-gradient(145deg,#0d2944,#0a1727);
-    color:#58c8ff;
-    font-size:18px;
+
+    color:white;
     font-weight:900;
-    box-shadow:0 0 24px rgba(22,131,255,.12);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--purple2)
+        );
+
+    box-shadow:
+        0 8px 20px rgba(109,40,217,.22);
 }
 
 .logo-name{
@@ -99,7 +161,7 @@ header{
 }
 
 .logo-name span{
-    color:var(--blue2);
+    color:var(--purple);
 }
 
 .nav{
@@ -108,252 +170,489 @@ header{
 }
 
 .nav button{
-    background:transparent;
     border:0;
+    background:transparent;
+
     color:var(--muted);
+
     padding:9px 13px;
-    border-radius:9px;
+
+    border-radius:10px;
+
     cursor:pointer;
+
     font-size:13px;
     font-weight:650;
+
+    transition:.2s;
 }
 
 .nav button:hover{
-    color:var(--text);
-    background:rgba(22,131,255,.08);
+    color:var(--purple);
+    background:var(--purple-soft);
 }
 
-/* ================= HERO ================= */
+/* =========================
+   HERO
+========================= */
 
 .hero{
-    max-width:1000px;
+    max-width:1050px;
+
     margin:auto;
-    padding:95px 24px 65px;
+
+    padding:
+        85px
+        24px
+        60px;
+
     text-align:center;
+
+    position:relative;
 }
 
-.hero-label{
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+    height:320px;
+
+    left:-100px;
+    top:20px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(139,92,246,.12),
+            transparent 70%
+        );
+
+    pointer-events:none;
+}
+
+.hero::after{
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    right:-80px;
+    top:40px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(249,115,22,.09),
+            transparent 70%
+        );
+
+    pointer-events:none;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero-badge{
     display:inline-flex;
+
     align-items:center;
     gap:8px;
-    padding:7px 12px;
-    border:1px solid rgba(56,189,248,.2);
+
+    padding:8px 14px;
+
     border-radius:999px;
-    background:rgba(22,131,255,.07);
-    color:#7dd3fc;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f2eaff,
+            #fff2e9
+        );
+
+    border:1px solid #e8dcff;
+
+    color:var(--purple);
+
     font-size:12px;
     font-weight:750;
-    margin-bottom:24px;
+
+    margin-bottom:23px;
 }
 
-.dot{
-    width:6px;
-    height:6px;
+.badge-dot{
+    width:7px;
+    height:7px;
+
     border-radius:50%;
-    background:var(--blue2);
-    box-shadow:0 0 12px rgba(56,189,248,.7);
+
+    background:var(--purple);
 }
 
 .hero h1{
-    font-size:clamp(48px,8vw,86px);
+    font-size:
+        clamp(
+            48px,
+            8vw,
+            86px
+        );
+
     line-height:.95;
+
     letter-spacing:-5px;
+
     font-weight:900;
 }
 
 .hero h1 span{
-    color:var(--blue2);
+    background:
+        linear-gradient(
+            100deg,
+            var(--purple),
+            var(--purple2),
+            var(--orange)
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
 }
 
 .hero p{
-    max-width:610px;
+    max-width:650px;
+
     margin:24px auto 32px;
+
     color:var(--muted);
+
     font-size:16px;
     line-height:1.7;
 }
 
-/* ================= SEARCH ================= */
+/* =========================
+   SEARCH
+========================= */
 
-.search-box{
-    max-width:720px;
+.search-wrap{
+    max-width:730px;
+
     margin:auto;
+
     position:relative;
 }
 
 .search-icon{
     position:absolute;
+
     left:20px;
-    top:19px;
-    color:#7290aa;
-    font-size:21px;
+    top:18px;
+
+    color:#9997a7;
+
+    font-size:22px;
+
     pointer-events:none;
 }
 
 .search{
     width:100%;
-    height:60px;
-    padding:0 20px 0 53px;
-    border:1px solid var(--border2);
-    border-radius:16px;
+    height:62px;
+
+    border:1px solid #dedee8;
+
+    border-radius:17px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #fbfbfe
+        );
+
+    padding:
+        0 22px
+        0 53px;
+
     outline:none;
-    background:rgba(9,27,44,.9);
+
     color:var(--text);
+
     font-size:15px;
-    box-shadow:var(--shadow);
+
+    box-shadow:
+        0 12px 35px rgba(40,25,80,.08);
+
     transition:.25s;
 }
 
 .search::placeholder{
-    color:#668098;
+    color:#aaa8b6;
 }
 
 .search:focus{
-    border-color:#217fca;
+    border-color:#b79af4;
+
     box-shadow:
-        0 0 0 3px rgba(22,131,255,.08),
-        var(--shadow);
+        0 0 0 4px rgba(109,40,217,.07),
+        0 15px 40px rgba(60,30,110,.10);
 }
 
-/* ================= MAIN ================= */
+/* =========================
+   MAIN
+========================= */
 
 main{
     max-width:1280px;
+
     margin:auto;
-    padding:0 24px 80px;
+
+    padding:
+        0 24px
+        85px;
 }
 
 .section{
-    margin-top:38px;
+    margin-top:40px;
 }
 
 .section-header{
     display:flex;
+
     align-items:end;
     justify-content:space-between;
-    margin-bottom:17px;
+
+    margin-bottom:18px;
 }
 
 .section-title{
-    font-size:20px;
-    font-weight:800;
+    font-size:21px;
+    font-weight:850;
+
     letter-spacing:-.4px;
 }
 
 .section-sub{
     margin-top:5px;
+
     color:var(--muted);
+
     font-size:12px;
 }
 
-/* ================= TOOLS ================= */
+/* =========================
+   TOOL GRID
+========================= */
 
 .tool-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:14px;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:15px;
 }
 
 .tool-card{
     position:relative;
-    overflow:hidden;
-    min-height:174px;
+
+    min-height:178px;
+
     padding:19px;
+
     border:1px solid var(--border);
+
     border-radius:var(--radius);
+
     background:
-        linear-gradient(145deg,
-        rgba(14,35,57,.96),
-        rgba(8,24,39,.96));
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.98),
+            rgba(250,250,253,.98)
+        );
+
+    box-shadow:
+        0 5px 18px rgba(35,25,65,.035);
+
     cursor:pointer;
+
+    overflow:hidden;
+
     transition:
-        transform .2s ease,
-        border-color .2s ease,
-        background .2s ease,
-        box-shadow .2s ease;
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease;
+}
+
+.tool-card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:var(--shadow-hover);
+
+    border-color:#ddd4f5;
 }
 
 .tool-card::after{
     content:"";
+
     position:absolute;
-    width:100px;
-    height:100px;
+
+    width:110px;
+    height:110px;
+
     right:-55px;
     top:-55px;
+
     border-radius:50%;
-    background:rgba(22,131,255,.08);
+
+    opacity:.55;
+
     transition:.25s;
 }
 
-.tool-card:hover{
-    transform:translateY(-4px);
-    border-color:#28618c;
-    background:
-        linear-gradient(145deg,
-        rgba(15,42,68,.98),
-        rgba(8,25,41,.98));
-    box-shadow:
-        0 16px 40px rgba(0,0,0,.25),
-        0 0 30px rgba(22,131,255,.05);
+.tool-card:hover::after{
+    transform:scale(1.4);
 }
 
-.tool-card:hover::after{
-    transform:scale(1.5);
+.tool-card.purple::after{
+    background:
+        radial-gradient(
+            circle,
+            rgba(139,92,246,.18),
+            transparent 70%
+        );
+}
+
+.tool-card.orange::after{
+    background:
+        radial-gradient(
+            circle,
+            rgba(249,115,22,.18),
+            transparent 70%
+        );
+}
+
+.tool-card.yellow::after{
+    background:
+        radial-gradient(
+            circle,
+            rgba(234,179,8,.18),
+            transparent 70%
+        );
+}
+
+.tool-card.red::after{
+    background:
+        radial-gradient(
+            circle,
+            rgba(239,68,68,.17),
+            transparent 70%
+        );
 }
 
 .tool-icon{
-    width:44px;
-    height:44px;
+    width:45px;
+    height:45px;
+
     border-radius:13px;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    background:rgba(22,131,255,.09);
-    border:1px solid rgba(56,189,248,.16);
-    color:#5fc9ff;
+
     font-size:20px;
+
     margin-bottom:16px;
+}
+
+.tool-card.purple .tool-icon{
+    color:var(--purple);
+    background:var(--purple-soft);
+}
+
+.tool-card.orange .tool-icon{
+    color:var(--orange);
+    background:var(--orange-soft);
+}
+
+.tool-card.yellow .tool-icon{
+    color:#b88600;
+    background:var(--yellow-soft);
+}
+
+.tool-card.red .tool-icon{
+    color:var(--red);
+    background:var(--red-soft);
 }
 
 .tool-name{
     font-size:15px;
     font-weight:800;
+
     margin-bottom:7px;
 }
 
 .tool-desc{
     color:var(--muted);
+
     font-size:12px;
+
     line-height:1.5;
 }
 
 .tool-footer{
     position:absolute;
+
     bottom:16px;
+
     left:19px;
     right:19px;
+
     display:flex;
-    justify-content:space-between;
+
     align-items:center;
-    color:#628099;
+    justify-content:space-between;
+
+    color:#9997a5;
+
     font-size:10px;
 }
 
 .tag{
-    padding:4px 7px;
-    border-radius:6px;
-    background:rgba(22,131,255,.07);
-    color:#7da2bd;
+    padding:4px 8px;
+
+    border-radius:7px;
+
+    background:#f4f4f8;
+
+    color:#777586;
 }
 
-/* ================= CATEGORY ================= */
+/* =========================
+   CATEGORY FILTER
+========================= */
 
 .category-filter{
     display:flex;
+
     gap:8px;
+
     overflow-x:auto;
+
+    padding:
+        2px 0
+        13px;
+
     scrollbar-width:none;
-    padding:3px 0 12px;
 }
 
 .category-filter::-webkit-scrollbar{
@@ -362,66 +661,153 @@ main{
 
 .filter{
     white-space:nowrap;
-    padding:9px 13px;
-    border-radius:9px;
+
     border:1px solid var(--border);
-    background:#091a2b;
+
+    background:#fff;
+
     color:var(--muted);
+
+    padding:9px 13px;
+
+    border-radius:10px;
+
     cursor:pointer;
+
     font-size:12px;
+
     font-weight:650;
+
     transition:.2s;
 }
 
 .filter:hover,
 .filter.active{
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--purple2)
+        );
+
     color:#fff;
-    background:#0e3760;
-    border-color:#24699c;
+
+    border-color:transparent;
+
+    box-shadow:
+        0 6px 15px rgba(109,40,217,.16);
 }
+
+/* =========================
+   CATEGORY GRID
+========================= */
 
 .category-grid{
     display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:11px;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    gap:12px;
 }
 
 .category{
     display:flex;
+
     align-items:center;
+
     gap:11px;
+
     padding:15px;
+
+    background:#fff;
+
     border:1px solid var(--border);
-    border-radius:14px;
-    background:rgba(9,27,44,.7);
+
+    border-radius:15px;
+
     cursor:pointer;
+
     transition:.2s;
 }
 
 .category:hover{
-    transform:translateY(-2px);
-    border-color:#255e89;
-    background:#0d263e;
+    transform:translateY(-3px);
+
+    border-color:#ddd3f7;
+
+    box-shadow:var(--shadow);
 }
 
 .category-icon{
-    width:36px;
-    height:36px;
+    width:38px;
+    height:38px;
+
     flex-shrink:0;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
-    border-radius:10px;
-    background:rgba(22,131,255,.08);
-    color:#62caff;
+
+    border-radius:11px;
+
+    font-size:11px;
+
+    font-weight:850;
+
+    color:var(--purple);
+
+    background:
+        linear-gradient(
+            135deg,
+            #f2eaff,
+            #f7f3ff
+        );
+}
+
+.category:nth-child(3n) .category-icon{
+    color:var(--orange);
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0e6,
+            #fff8f3
+        );
+}
+
+.category:nth-child(4n) .category-icon{
+    color:#b58b00;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8d8,
+            #fffcef
+        );
+}
+
+.category:nth-child(5n) .category-icon{
+    color:var(--red);
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f0,
+            #fff8f8
+        );
 }
 
 .category-name{
     font-size:12px;
-    font-weight:700;
+
+    font-weight:750;
 }
 
-/* ================= SEARCH RESULT ================= */
+/* =========================
+   SEARCH RESULTS
+========================= */
 
 #searchSection{
     display:none;
@@ -429,54 +815,184 @@ main{
 
 .empty{
     text-align:center;
+
     padding:55px 20px;
+
     color:var(--muted);
 }
 
 .empty-icon{
-    font-size:38px;
-    margin-bottom:12px;
+    font-size:40px;
+
+    margin-bottom:10px;
 }
 
-/* ================= FOOTER ================= */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-    border-top:1px solid rgba(35,76,111,.45);
-    background:#040c15;
+    border-top:1px solid #e6e5ed;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #f8f7fc
+        );
 }
 
-.footer{
+.footer-main{
     max-width:1280px;
+
     margin:auto;
-    padding:30px 24px;
+
+    padding:
+        55px 24px
+        38px;
+
+    display:grid;
+
+    grid-template-columns:
+        1.6fr
+        1fr
+        1fr
+        1fr;
+
+    gap:40px;
+}
+
+.footer-brand{
+    max-width:330px;
+}
+
+.footer-logo{
     display:flex;
-    justify-content:space-between;
-    color:#60788f;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:19px;
+
+    font-weight:850;
+
+    margin-bottom:13px;
+}
+
+.footer-logo-mark{
+    width:35px;
+    height:35px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:10px;
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--orange)
+        );
+}
+
+.footer-description{
+    color:var(--muted);
+
     font-size:12px;
+
+    line-height:1.7;
 }
 
-.footer strong{
-    color:#a8bfd3;
+.footer-title{
+    font-size:13px;
+
+    font-weight:800;
+
+    margin-bottom:15px;
 }
 
-/* ================= RESPONSIVE ================= */
+.footer-links{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:9px;
+}
+
+.footer-links a{
+    color:var(--muted);
+
+    text-decoration:none;
+
+    font-size:12px;
+
+    transition:.2s;
+}
+
+.footer-links a:hover{
+    color:var(--purple);
+}
+
+.footer-bottom{
+    max-width:1280px;
+
+    margin:auto;
+
+    padding:
+        20px 24px;
+
+    border-top:1px solid #e8e7ee;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    gap:20px;
+
+    color:#9997a5;
+
+    font-size:11px;
+}
+
+.footer-bottom strong{
+    color:#625f6c;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width:1050px){
 
     .tool-grid{
-        grid-template-columns:repeat(3,1fr);
+        grid-template-columns:
+            repeat(3,1fr);
     }
 
     .category-grid{
-        grid-template-columns:repeat(4,1fr);
+        grid-template-columns:
+            repeat(4,1fr);
+    }
+
+    .footer-main{
+        grid-template-columns:
+            repeat(2,1fr);
     }
 }
 
 @media(max-width:760px){
 
-    .header{
+    .header-inner{
         height:64px;
-        padding:0 16px;
+
+        padding:
+            0 16px;
     }
 
     .nav{
@@ -484,7 +1000,9 @@ footer{
     }
 
     .hero{
-        padding:65px 18px 45px;
+        padding:
+            65px 18px
+            48px;
     }
 
     .hero h1{
@@ -496,21 +1014,38 @@ footer{
     }
 
     main{
-        padding:0 16px 60px;
+        padding:
+            0 16px
+            60px;
     }
 
     .tool-grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
     .category-grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
-    .footer{
+    .footer-main{
+        grid-template-columns:1fr;
+
+        gap:30px;
+
+        padding:
+            42px 18px
+            30px;
+    }
+
+    .footer-bottom{
+        padding:
+            18px;
+
         flex-direction:column;
-        gap:10px;
-        padding:25px 16px;
+
+        align-items:flex-start;
     }
 }
 
@@ -521,23 +1056,13 @@ footer{
     }
 
     .hero h1{
-        font-size:49px;
+        font-size:50px;
     }
-}
 
-/* ================= SUBTLE GRID ================= */
-
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    opacity:.18;
-    background-image:
-        linear-gradient(rgba(55,130,190,.06) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(55,130,190,.06) 1px,transparent 1px);
-    background-size:45px 45px;
-    mask-image:linear-gradient(to bottom,#000,transparent 70%);
+    .category-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
 }
 
 </style>
@@ -545,15 +1070,19 @@ body::before{
 
 <body>
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
-<div class="header">
+<div class="header-inner">
 
 <a href="#" class="logo">
 
-<div class="logo-mark">R</div>
+<div class="logo-mark">
+R
+</div>
 
 <div class="logo-name">
 REY <span>TOOLS</span>
@@ -582,13 +1111,17 @@ Categories
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
-<div class="hero-label">
+<div class="hero-content">
 
-<span class="dot"></span>
+<div class="hero-badge">
+
+<span class="badge-dot"></span>
 
 FREE ONLINE UTILITIES
 
@@ -600,13 +1133,15 @@ REY <span>TOOLS</span>
 
 <p>
 Everything You Need. One Place.
-Fast, simple and useful online tools
-for everyday work.
+Simple, useful and fast online tools
+for everyday work, productivity and creativity.
 </p>
 
-<div class="search-box">
+<div class="search-wrap">
 
-<div class="search-icon">⌕</div>
+<div class="search-icon">
+⌕
+</div>
 
 <input
 id="searchInput"
@@ -617,14 +1152,23 @@ autocomplete="off">
 
 </div>
 
+</div>
+
 </section>
 
 
+<!-- =========================
+     MAIN
+========================= -->
+
 <main>
+
 
 <!-- TRENDING -->
 
-<section class="section" id="trending">
+<section
+class="section"
+id="trending">
 
 <div class="section-header">
 
@@ -635,7 +1179,7 @@ autocomplete="off">
 </div>
 
 <div class="section-sub">
-Popular tools to get things done faster
+Popular tools people use frequently
 </div>
 
 </div>
@@ -652,7 +1196,9 @@ id="trendingGrid">
 
 <!-- POPULAR -->
 
-<section class="section" id="popular">
+<section
+class="section"
+id="popular">
 
 <div class="section-header">
 
@@ -691,7 +1237,7 @@ id="popularGrid">
 </div>
 
 <div class="section-sub">
-Fresh utilities added to REY TOOLS
+Recently added utilities
 </div>
 
 </div>
@@ -708,7 +1254,9 @@ id="newGrid">
 
 <!-- CATEGORIES -->
 
-<section class="section" id="categories">
+<section
+class="section"
+id="categories">
 
 <div class="section-header">
 
@@ -719,7 +1267,7 @@ Explore Categories
 </div>
 
 <div class="section-sub">
-Browse tools by category
+Find the right tool for your task
 </div>
 
 </div>
@@ -739,7 +1287,7 @@ id="categoryGrid">
 </section>
 
 
-<!-- SEARCH -->
+<!-- SEARCH RESULTS -->
 
 <section
 class="section"
@@ -781,23 +1329,152 @@ No matching tools found.
 
 </section>
 
+
 </main>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-<div class="footer">
+<div class="footer-main">
+
+
+<!-- BRAND -->
+
+<div class="footer-brand">
+
+<div class="footer-logo">
+
+<div class="footer-logo-mark">
+R
+</div>
+
+REY TOOLS
+
+</div>
+
+<div class="footer-description">
+
+REY TOOLS is a simple and useful online
+utility platform designed to help with
+everyday tasks, productivity, creativity,
+development and more.
+
+Everything You Need. One Place.
+
+</div>
+
+</div>
+
+
+<!-- QUICK LINKS -->
 
 <div>
-<strong>REY TOOLS</strong>
-<br>
-Everything You Need. One Place.
+
+<div class="footer-title">
+Quick Links
+</div>
+
+<div class="footer-links">
+
+<a href="#">
+Home
+</a>
+
+<a href="#trending">
+Trending Tools
+</a>
+
+<a href="#popular">
+Popular Tools
+</a>
+
+<a href="#categories">
+Categories
+</a>
+
+</div>
+
+</div>
+
+
+<!-- INFORMATION -->
+
+<div>
+
+<div class="footer-title">
+Information
+</div>
+
+<div class="footer-links">
+
+<a href="#">
+About REY TOOLS
+</a>
+
+<a href="#">
+Contact
+</a>
+
+<a href="#">
+Privacy Policy
+</a>
+
+<a href="#">
+Terms of Use
+</a>
+
+</div>
+
+</div>
+
+
+<!-- LEGAL -->
+
+<div>
+
+<div class="footer-title">
+Legal
+</div>
+
+<div class="footer-links">
+
+<a href="#">
+Disclaimer
+</a>
+
+<a href="#">
+Cookie Policy
+</a>
+
+<a href="#">
+Security
+</a>
+
+<a href="#">
+Report an Issue
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+<div>
+© 2026 <strong>REY TOOLS</strong>.
+All rights reserved.
 </div>
 
 <div>
-© 2026 REY TOOLS
+Made for simple, useful and better tools.
 </div>
 
 </div>
@@ -807,18 +1484,21 @@ Everything You Need. One Place.
 
 <script>
 
-/* =========================================
+/* =====================================================
    TOOL DATABASE
-========================================= */
+===================================================== */
 
 const tools = [
+
+/* TRENDING */
 
 {
 name:"QR Code Generator",
 icon:"▦",
 category:"QR & Barcode",
 desc:"Create QR codes from text, links and more.",
-type:"Trending"
+type:"Trending",
+color:"purple"
 },
 
 {
@@ -826,7 +1506,8 @@ name:"Password Generator",
 icon:"⌁",
 category:"Security",
 desc:"Generate strong random passwords.",
-type:"Trending"
+type:"Trending",
+color:"red"
 },
 
 {
@@ -834,7 +1515,8 @@ name:"Image Compressor",
 icon:"◫",
 category:"Image",
 desc:"Reduce image file size quickly.",
-type:"Trending"
+type:"Trending",
+color:"orange"
 },
 
 {
@@ -842,7 +1524,8 @@ name:"JSON Formatter",
 icon:"{ }",
 category:"Developer",
 desc:"Format and inspect JSON data.",
-type:"Trending"
+type:"Trending",
+color:"purple"
 },
 
 {
@@ -850,7 +1533,8 @@ name:"Word Counter",
 icon:"Aa",
 category:"Text",
 desc:"Count words, characters and lines.",
-type:"Trending"
+type:"Trending",
+color:"yellow"
 },
 
 {
@@ -858,7 +1542,8 @@ name:"Color Picker",
 icon:"◉",
 category:"Color",
 desc:"Pick and inspect colors.",
-type:"Trending"
+type:"Trending",
+color:"purple"
 },
 
 {
@@ -866,7 +1551,8 @@ name:"Unit Converter",
 icon:"↔",
 category:"Converter",
 desc:"Convert common units instantly.",
-type:"Trending"
+type:"Trending",
+color:"blue"
 },
 
 {
@@ -874,15 +1560,20 @@ name:"PDF Merger",
 icon:"▤",
 category:"PDF",
 desc:"Combine multiple PDF documents.",
-type:"Trending"
+type:"Trending",
+color:"orange"
 },
+
+
+/* POPULAR */
 
 {
 name:"Calculator",
 icon:"＋",
 category:"Calculator",
 desc:"Fast and simple online calculator.",
-type:"Popular"
+type:"Popular",
+color:"purple"
 },
 
 {
@@ -890,7 +1581,8 @@ name:"Age Calculator",
 icon:"◷",
 category:"Date & Time",
 desc:"Calculate exact age from birth date.",
-type:"Popular"
+type:"Popular",
+color:"yellow"
 },
 
 {
@@ -898,7 +1590,8 @@ name:"Percentage Calculator",
 icon:"%",
 category:"Math",
 desc:"Calculate percentages instantly.",
-type:"Popular"
+type:"Popular",
+color:"purple"
 },
 
 {
@@ -906,7 +1599,8 @@ name:"Image Resizer",
 icon:"↕",
 category:"Image",
 desc:"Resize images to custom dimensions.",
-type:"Popular"
+type:"Popular",
+color:"orange"
 },
 
 {
@@ -914,7 +1608,8 @@ name:"Text Case Converter",
 icon:"Aa",
 category:"Text",
 desc:"Convert text between different cases.",
-type:"Popular"
+type:"Popular",
+color:"purple"
 },
 
 {
@@ -922,7 +1617,8 @@ name:"Base64 Encoder",
 icon:"64",
 category:"Developer",
 desc:"Encode text into Base64 format.",
-type:"Popular"
+type:"Popular",
+color:"blue"
 },
 
 {
@@ -930,7 +1626,8 @@ name:"URL Encoder",
 icon:"↗",
 category:"Web",
 desc:"Encode and decode URLs.",
-type:"Popular"
+type:"Popular",
+color:"blue"
 },
 
 {
@@ -938,15 +1635,20 @@ name:"Timestamp Converter",
 icon:"◷",
 category:"Developer",
 desc:"Convert Unix timestamps easily.",
-type:"Popular"
+type:"Popular",
+color:"yellow"
 },
+
+
+/* NEW */
 
 {
 name:"Lorem Ipsum Generator",
 icon:"Aa",
 category:"Writing",
 desc:"Generate placeholder text instantly.",
-type:"New"
+type:"New",
+color:"purple"
 },
 
 {
@@ -954,7 +1656,8 @@ name:"Random Number Generator",
 icon:"#",
 category:"Generators",
 desc:"Generate random numbers within a range.",
-type:"New"
+type:"New",
+color:"orange"
 },
 
 {
@@ -962,7 +1665,8 @@ name:"Slug Generator",
 icon:"↗",
 category:"SEO",
 desc:"Create clean SEO-friendly URL slugs.",
-type:"New"
+type:"New",
+color:"yellow"
 },
 
 {
@@ -970,15 +1674,16 @@ name:"Text Cleaner",
 icon:"✦",
 category:"Text",
 desc:"Clean spaces and unnecessary line breaks.",
-type:"New"
+type:"New",
+color:"red"
 }
 
 ];
 
 
-/* =========================================
+/* =====================================================
    30 CATEGORIES
-========================================= */
+===================================================== */
 
 const categories = [
 
@@ -1016,16 +1721,16 @@ const categories = [
 ];
 
 
-/* =========================================
-   CREATE CARD
-========================================= */
+/* =====================================================
+   CARD
+===================================================== */
 
 function createCard(tool){
 
 return `
 
 <div
-class="tool-card"
+class="tool-card ${tool.color}"
 data-name="${tool.name.toLowerCase()}"
 data-category="${tool.category.toLowerCase()}">
 
@@ -1060,9 +1765,9 @@ Open →
 }
 
 
-/* =========================================
-   RENDER
-========================================= */
+/* =====================================================
+   RENDER TOOLS
+===================================================== */
 
 function renderTools(){
 
@@ -1087,9 +1792,9 @@ tools
 }
 
 
-/* =========================================
+/* =====================================================
    CATEGORIES
-========================================= */
+===================================================== */
 
 function renderCategories(){
 
@@ -1130,6 +1835,7 @@ All
 `;
 
 filters.innerHTML +=
+
 categories.map(c=>`
 
 <button
@@ -1143,9 +1849,9 @@ ${c[0]}
 }
 
 
-/* =========================================
+/* =====================================================
    CATEGORY FILTER
-========================================= */
+===================================================== */
 
 function filterCategory(category,button){
 
@@ -1153,7 +1859,9 @@ if(button){
 
 document
 .querySelectorAll(".filter")
-.forEach(b=>b.classList.remove("active"));
+.forEach(b=>
+b.classList.remove("active")
+);
 
 button.classList.add("active");
 
@@ -1173,7 +1881,8 @@ return;
 }
 
 card.style.display =
-card.dataset.category===category.toLowerCase()
+card.dataset.category===
+category.toLowerCase()
 ? ""
 : "none";
 
@@ -1182,32 +1891,44 @@ card.dataset.category===category.toLowerCase()
 }
 
 
-/* =========================================
+/* =====================================================
    SEARCH
-========================================= */
+===================================================== */
 
-const search =
+const searchInput =
 document.getElementById("searchInput");
 
-search.addEventListener("input",()=>{
+searchInput.addEventListener(
+"input",
+function(){
 
-const q =
-search.value.trim().toLowerCase();
+const query =
+this.value
+.trim()
+.toLowerCase();
 
 const section =
-document.getElementById("searchSection");
+document.getElementById(
+"searchSection"
+);
 
 const grid =
-document.getElementById("searchGrid");
+document.getElementById(
+"searchGrid"
+);
 
 const empty =
-document.getElementById("emptyState");
+document.getElementById(
+"emptyState"
+);
 
 const count =
-document.getElementById("resultCount");
+document.getElementById(
+"resultCount"
+);
 
 
-if(!q){
+if(!query){
 
 section.style.display="none";
 
@@ -1222,25 +1943,38 @@ section.style.display="block";
 const results =
 tools.filter(tool=>
 
-tool.name.toLowerCase().includes(q) ||
+tool.name
+.toLowerCase()
+.includes(query)
 
-tool.category.toLowerCase().includes(q) ||
+||
 
-tool.desc.toLowerCase().includes(q)
+tool.category
+.toLowerCase()
+.includes(query)
+
+||
+
+tool.desc
+.toLowerCase()
+.includes(query)
 
 );
 
 
 count.textContent =
 results.length +
-(results.length===1
-?" tool found"
-:" tools found");
+(
+results.length===1
+? " tool found"
+: " tools found"
+);
 
 
 if(!results.length){
 
 grid.innerHTML="";
+
 empty.style.display="block";
 
 }else{
@@ -1248,16 +1982,18 @@ empty.style.display="block";
 empty.style.display="none";
 
 grid.innerHTML =
-results.map(createCard).join("");
+results
+.map(createCard)
+.join("");
 
 }
 
 });
 
 
-/* =========================================
+/* =====================================================
    SCROLL
-========================================= */
+===================================================== */
 
 function scrollToSection(id){
 
@@ -1270,9 +2006,9 @@ behavior:"smooth"
 }
 
 
-/* =========================================
-   START
-========================================= */
+/* =====================================================
+   INIT
+===================================================== */
 
 renderTools();
 

@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>REY.TOOLS — Everything You Need. One Place.</title>
+
+<meta name="description" content="REY.TOOLS — Free online tools for AI, PDF, images, video, audio, text, developer, finance and more.">
+<meta name="theme-color" content="#0b0d12">
+
+<style>
+:root{
+    --bg:#f6f7fb;
+    --surface:#ffffff;
+    --surface-2:#f0f2f7;
+    --text:#111318;
+    --muted:#6d7280;
+    --border:#e4e7ee;
+    --primary:#635bff;
+    --primary-dark:#5148e5;
+    --primary-soft:#eeecff;
+    --shadow:0 10px 35px rgba(20,25,40,.07);
+    --radius:18px;
+}
+
+body.dark{
+    --bg:#090b10;
+    --surface:#11141b;
+    --surface-2:#181c25;
+    --text:#f4f5f7;
+    --muted:#9da3b1;
+    --border:#252a35;
+    --primary:#8178ff;
+    --primary-dark:#7066f0;
+    --primary-soft:#211f42;
+    --shadow:0 12px 35px rgba(0,0,0,.25);
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.5;
+    transition:.25s ease;
+}
+
+button,
+input{
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(246,247,251,.88);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--border);
+}
+
+body.dark .header{
+    background:rgba(9,11,16,.88);
+}
+
+.header-inner{
+    max-width:1240px;
+    margin:auto;
+    height:72px;
+    padding:0 22px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    font-weight:900;
+    font-size:21px;
+    letter-spacing:-.7px;
+    white-space:nowrap;
+}
+
+.logo-mark{
+    width:38px;
+    height:38px;
+    border-radius:12px;
+    background:linear-gradient(135deg,var(--primary),#9a94ff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-weight:900;
+    box-shadow:0 7px 20px rgba(99,91,255,.25);
+}
+
+.nav{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+.nav a{
+    padding:9px 13px;
+    border-radius:10px;
+    color:var(--muted);
+    font-size:14px;
+    font-weight:650;
+}
+
+.nav a:hover{
+    background:var(--surface-2);
+    color:var(--text);
+}
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.icon-btn{
+    width:40px;
+    height:40px;
+    border:1px solid var(--border);
+    background:var(--surface);
+    color:var(--text);
+    border-radius:11px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:17px;
+}
+
+.icon-btn:hover{
+    border-color:var(--primary);
+}
+
+.mobile-menu{
+    display:none;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    max-width:1240px;
+    margin:auto;
+    padding:78px 22px 55px;
+    text-align:center;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    padding:7px 13px;
+    background:var(--primary-soft);
+    color:var(--primary);
+    border:1px solid rgba(99,91,255,.12);
+    border-radius:999px;
+    font-size:12px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.badge-dot{
+    width:7px;
+    height:7px;
+    background:#35b978;
+    border-radius:50%;
+}
+
+.hero h1{
+    font-size:clamp(38px,6vw,70px);
+    line-height:1.02;
+    letter-spacing:-3px;
+    font-weight:900;
+    max-width:850px;
+    margin:0 auto 18px;
+}
+
+.gradient-text{
+    background:linear-gradient(110deg,var(--primary),#9a67ff);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    max-width:650px;
+    margin:auto;
+    color:var(--muted);
+    font-size:17px;
+}
+
+.search-wrap{
+    max-width:720px;
+    margin:35px auto 0;
+    position:relative;
+}
+
+.search-box{
+    width:100%;
+    height:62px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:0 22px 0 54px;
+    color:var(--text);
+    outline:none;
+    font-size:15px;
+    box-shadow:var(--shadow);
+}
+
+.search-box:focus{
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(99,91,255,.09),var(--shadow);
+}
+
+.search-icon{
+    position:absolute;
+    left:20px;
+    top:50%;
+    transform:translateY(-50%);
+    color:var(--muted);
+    font-size:20px;
+    pointer-events:none;
+}
+
+.search-shortcut{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    border:1px solid var(--border);
+    color:var(--muted);
+    background:var(--surface-2);
+    padding:4px 8px;
+    border-radius:6px;
+    font-size:11px;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+    max-width:920px;
+    margin:0 auto 70px;
+    padding:0 22px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.stat{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:19px;
+    text-align:center;
+}
+
+.stat strong{
+    display:block;
+    font-size:25px;
+    font-weight:900;
+}
+
+.stat span{
+    color:var(--muted);
+    font-size:12px;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.container{
+    max-width:1240px;
+    margin:auto;
+    padding:0 22px 80px;
+}
+
+.section{
+    margin-bottom:70px;
+}
+
+.section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:15px;
+    margin-bottom:22px;
+}
+
+.section-title{
+    font-size:27px;
+    font-weight:900;
+    letter-spacing:-1px;
+}
+
+.section-subtitle{
+    color:var(--muted);
+    font-size:14px;
+    margin-top:4px;
+}
+
+.view-all{
+    color:var(--primary);
+    font-size:13px;
+    font-weight:750;
+}
+
+/* =========================
+   TOOLS
+========================= */
+
+.tools-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.tool-card{
+    position:relative;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:17px;
+    padding:19px;
+    min-height:180px;
+    transition:.22s ease;
+    overflow:hidden;
+}
+
+.tool-card:hover{
+    transform:translateY(-4px);
+    border-color:rgba(99,91,255,.4);
+    box-shadow:var(--shadow);
+}
+
+.tool-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:start;
+}
+
+.tool-icon{
+    width:45px;
+    height:45px;
+    border-radius:13px;
+    background:var(--primary-soft);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+}
+
+.favorite{
+    border:0;
+    background:transparent;
+    color:#a4a8b1;
+    font-size:18px;
+}
+
+.favorite.active{
+    color:#ffb020;
+}
+
+.tool-card h3{
+    font-size:15px;
+    margin-top:17px;
+    font-weight:800;
+}
+
+.tool-card p{
+    font-size:12px;
+    color:var(--muted);
+    margin-top:5px;
+}
+
+.tool-meta{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    margin-top:14px;
+}
+
+.tag{
+    font-size:10px;
+    font-weight:800;
+    padding:4px 7px;
+    border-radius:6px;
+    background:var(--surface-2);
+    color:var(--muted);
+}
+
+.tag.hot{
+    color:#e58b00;
+    background:#fff5dd;
+}
+
+body.dark .tag.hot{
+    background:#332915;
+}
+
+.tag.new{
+    color:#168b59;
+    background:#e6f8ef;
+}
+
+body.dark .tag.new{
+    background:#123224;
+}
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:12px;
+}
+
+.category{
+    border:1px solid var(--border);
+    background:var(--surface);
+    border-radius:15px;
+    padding:17px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    transition:.2s ease;
+    cursor:pointer;
+}
+
+.category:hover{
+    transform:translateY(-2px);
+    border-color:var(--primary);
+    background:var(--primary-soft);
+}
+
+.category-icon{
+    width:38px;
+    height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--surface-2);
+    border-radius:10px;
+    font-size:19px;
+}
+
+.category strong{
+    font-size:13px;
+}
+
+.category small{
+    display:block;
+    color:var(--muted);
+    font-size:10px;
+    margin-top:2px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:linear-gradient(135deg,#171a27,#292d43);
+    color:white;
+    border-radius:25px;
+    padding:55px 35px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.cta:after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:rgba(99,91,255,.25);
+    filter:blur(70px);
+    border-radius:50%;
+    right:-80px;
+    top:-100px;
+}
+
+.cta h2{
+    position:relative;
+    z-index:2;
+    font-size:31px;
+    font-weight:900;
+    letter-spacing:-1px;
+}
+
+.cta p{
+    position:relative;
+    z-index:2;
+    color:#c5c9d5;
+    margin:9px auto 22px;
+    max-width:600px;
+    font-size:14px;
+}
+
+.cta-btn{
+    position:relative;
+    z-index:2;
+    display:inline-flex;
+    padding:12px 20px;
+    background:white;
+    color:#171a27;
+    border-radius:11px;
+    font-size:13px;
+    font-weight:850;
+}
+
+/* =========================
+   EMPTY SEARCH
+========================= */
+
+.no-results{
+    display:none;
+    text-align:center;
+    padding:55px 20px;
+    color:var(--muted);
+}
+
+.no-results strong{
+    display:block;
+    color:var(--text);
+    font-size:18px;
+    margin-bottom:5px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    border-top:1px solid var(--border);
+    background:var(--surface);
+}
+
+.footer-inner{
+    max-width:1240px;
+    margin:auto;
+    padding:45px 22px 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr repeat(3,1fr);
+    gap:40px;
+}
+
+.footer-brand p{
+    color:var(--muted);
+    max-width:320px;
+    font-size:13px;
+    margin-top:12px;
+}
+
+.footer-col h4{
+    font-size:13px;
+    margin-bottom:13px;
+}
+
+.footer-col a{
+    display:block;
+    color:var(--muted);
+    font-size:12px;
+    margin:8px 0;
+}
+
+.footer-col a:hover{
+    color:var(--primary);
+}
+
+.copyright{
+    border-top:1px solid var(--border);
+    margin-top:35px;
+    padding-top:20px;
+    display:flex;
+    justify-content:space-between;
+    color:var(--muted);
+    font-size:11px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+    .tools-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .category-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .nav{
+        display:none;
+    }
+
+    .mobile-menu{
+        display:flex;
+    }
+}
+
+@media(max-width:700px){
+
+    .header-inner{
+        height:64px;
+        padding:0 15px;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .logo-mark{
+        width:34px;
+        height:34px;
+    }
+
+    .hero{
+        padding:55px 16px 40px;
+    }
+
+    .hero h1{
+        font-size:43px;
+        letter-spacing:-2px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .search-box{
+        height:56px;
+    }
+
+    .search-shortcut{
+        display:none;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+        margin-bottom:50px;
+        padding:0 16px;
+    }
+
+    .container{
+        padding:0 16px 55px;
+    }
+
+    .tools-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .tool-card{
+        padding:15px;
+        min-height:165px;
+    }
+
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .section{
+        margin-bottom:52px;
+    }
+
+    .section-title{
+        font-size:23px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-brand{
+        grid-column:1/-1;
+    }
+
+    .copyright{
+        flex-direction:column;
+        gap:7px;
+    }
+}
+
+@media(max-width:420px){
+
+    .tools-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .category{
+        padding:13px 10px;
+    }
+
+    .category strong{
+        font-size:11px;
+    }
+
+    .category small{
+        font-size:9px;
+    }
+
+    .tool-card h3{
+        font-size:13px;
+    }
+
+    .tool-card p{
+        font-size:11px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <div class="header-inner">
+
+        <a href="#" class="logo">
+            <span class="logo-mark">R</span>
+            <span>REY<span style="color:var(--primary)">.TOOLS</span></span>
+        </a>
+
+        <nav class="nav">
+            <a href="#popular">Popular</a>
+            <a href="#categories">Categories</a>
+            <a href="#new">New Tools</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <button class="icon-btn" id="themeBtn" title="Toggle theme">
+                ☾
+            </button>
+
+            <button class="icon-btn mobile-menu" id="mobileBtn">
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="badge">
+        <span class="badge-dot"></span>
+        300+ Tools Coming Soon
+    </div>
+
+    <h1>
+        Everything You Need.
+        <span class="gradient-text">One Place.</span>
+    </h1>
+
+    <p>
+        Powerful, simple and free online tools for everyday tasks,
+        work, creativity and productivity.
+    </p>
+
+    <div class="search-wrap">
+
+        <span class="search-icon">⌕</span>
+
+        <input
+            id="searchInput"
+            class="search-box"
+            type="search"
+            placeholder="Search for a tool..."
+            autocomplete="off"
+        >
+
+        <span class="search-shortcut">CTRL K</span>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<div class="stats">
+
+    <div class="stat">
+        <strong>300+</strong>
+        <span>Tools planned</span>
+    </div>
+
+    <div class="stat">
+        <strong>30</strong>
+        <span>Categories</span>
+    </div>
+
+    <div class="stat">
+        <strong>100%</strong>
+        <span>Online</span>
+    </div>
+
+</div>
+
+
+<main class="container">
+
+
+<!-- =========================
+     TRENDING
+========================= -->
+
+<section class="section" id="popular">
+
+    <div class="section-head">
+
+        <div>
+            <div class="section-title">🔥 Trending Tools</div>
+            <div class="section-subtitle">
+                Tools people are looking for right now.
+            </div>
+        </div>
+
+        <a href="#categories" class="view-all">
+            View all →
+        </a>
+
+    </div>
+
+    <div class="tools-grid">
+
+        <div class="tool-card" data-tool="PDF to Word" data-category="PDF">
+
+            <div class="tool-top">
+                <div class="tool-icon">📄</div>
+                <button class="favorite">☆</button>
+            </div>
+
+            <h3>PDF → Word</h3>
+            <p>Convert PDF documents into editable Word files.</p>
+
+            <div class="tool-meta">
+                <span class="tag hot">HOT</span>
+                <span class="tag">PDF</span>
+            </div>
+
+        </div>
+
+
+        <div class="tool-card" data-tool="Image Compressor" data-category="Image">
+
+            <div class="tool-top">
+                <div class="tool-icon">🖼️</div>
+                <button class="favorite">☆</button>
+            </div>
+
+            <h3>Image Compressor</h3>
+            <p>Reduce image file size while keeping quality.</p>
+
+            <div class="tool-meta">
+                <span class="tag hot">HOT</span>
+                <span class="tag">IMAGE</span>
+            </div>
+
+        </div>
+
+
+        <div class="tool-card" data-tool="Background Remover" data-category="Background">
+
+            <div class="tool-top">
+                <div class="tool-icon">✂️</div>
+                <button class="favorite">☆</button>
+            </div>
+
+            <h3>Background Remover</h3>
+            <p>Remove image backgrounds quickly and easily.</p>
+
+            <div class="tool-meta">
+                <span class="tag hot">HOT</span>
+                <span class="tag">IMAGE</span>
+            </div>
+
+        </div>
+
+
+        <div class="tool-card" data-tool="AI Summarizer" data-category="AI">
+
+            <div class="tool-top">
+                <div class="tool-icon">🤖</div>
+                <button class="favorite">☆</button>
+            </div>
+
+            <h3>AI Summarizer</h3>
+            <p>Turn long text into short, useful summaries.</p>
+
+            <div class="tool-meta">
+                <span class="tag hot">HOT</span>
+                <span class="tag">AI</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     POPULAR
+========================= -->
+
+<section class="section">
+
+    <div class="section-head">
+
+        <div>
+            <div class="section-title">⭐ Popular Tools</div>
+            <div class="section-subtitle">
+                Useful tools for everyday tasks.
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tools-grid">
+
+        <div class="tool-card" data-tool="JPG to PDF">
+
+            <div class="tool-top">
+                <div class="tool-icon">📑</div>
+                <button class="favorite">☆</button>
+            </div>
+
+            <h3>JPG → PDF</h3>
+            <p>Convert JPG images into PDF documents.</p>
+
+            <div class="tool-meta">
+                <span class="tag">PDF</span>
+            </div>
+
+        </div>
+
+
+        <div class="tool-card" data-tool="QR Code Generator">
+
+            <div class="tool-top">
+                <div class="tool-icon">▦</div>
+                <button class="favorite">☆</button>
+            </div>
+
+            <h3>QR Code Generator</h3>
+            <p>Create QR codes for links, text and more.</p>
+
+            <div class="tool-meta">
+                <span class="tag">QR</span>
+            </div>
+
+        </div>
+
+
+        <div class="tool-card" data-tool="Word Counter">
+
+            <div class="tool-top">
+                <div class="tool-icon">🔤</div>
+                <button class="favorite">☆</button>
+            </div>
+
+            <h3>Word Counter</h3>
+            <p>Count words, characters and paragraphs.</p>
+
+            <div class="tool-meta">
+                <span class="tag">TEXT</span>
+            </div>
+
+        </div>
+
+
+        <div class="tool-card" data-tool="JSON Formatter">
+
+            <div class="tool-top">
+                <div class="tool-icon">{ }</div>
+                <button class="favorite">☆</button>
+            </div>
+
+            <h3>JSON Formatter</h3>
+            <p>Format and make JSON data easier to read.</p>
+
+            <div class="tool-meta">
+                <span class="tag">DEV</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CATEGORIES
+========================= -->
+
+<section class="section" id="categories">
+
+    <div class="section-head">
+
+        <div>
+            <div class="section-title">📂 Explore Categories</div>
+            <div class="section-subtitle">
+                Everything organized in one place.
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="category-grid">
+
+        <div class="category" data-category="AI">
+            <div class="category-icon">🤖</div>
+            <div>
+                <strong>AI Tools</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="PDF">
+            <div class="category-icon">📄</div>
+            <div>
+                <strong>PDF Tools</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Image">
+            <div class="category-icon">🖼️</div>
+            <div>
+                <strong>Image Tools</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Video">
+            <div class="category-icon">🎬</div>
+            <div>
+                <strong>Video Tools</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Audio">
+            <div class="category-icon">🎵</div>
+            <div>
+                <strong>Audio Tools</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Voice">
+            <div class="category-icon">🎙️</div>
+            <div>
+                <strong>Voice Tools</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Text">
+            <div class="category-icon">🔤</div>
+            <div>
+                <strong>Text Tools</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Translator">
+            <div class="category-icon">🌐</div>
+            <div>
+                <strong>Translator</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="URL">
+            <div class="category-icon">🔗</div>
+            <div>
+                <strong>URL Tools</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="QR">
+            <div class="category-icon">▦</div>
+            <div>
+                <strong>QR Tools</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Barcode">
+            <div class="category-icon">🏷️</div>
+            <div>
+                <strong>Barcode</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Security">
+            <div class="category-icon">🔐</div>
+            <div>
+                <strong>Security</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Developer">
+            <div class="category-icon">💻</div>
+            <div>
+                <strong>Developer</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Calculator">
+            <div class="category-icon">🧮</div>
+            <div>
+                <strong>Calculator</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Finance">
+            <div class="category-icon">💰</div>
+            <div>
+                <strong>Finance</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Business">
+            <div class="category-icon">📈</div>
+            <div>
+                <strong>Business</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="E-Commerce">
+            <div class="category-icon">🛒</div>
+            <div>
+                <strong>E-Commerce</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Marketing">
+            <div class="category-icon">📣</div>
+            <div>
+                <strong>Marketing</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Social Media">
+            <div class="category-icon">📱</div>
+            <div>
+                <strong>Social Media</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Date">
+            <div class="category-icon">📅</div>
+            <div>
+                <strong>Date & Time</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Converter">
+            <div class="category-icon">🔢</div>
+            <div>
+                <strong>Converters</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Generator">
+            <div class="category-icon">✨</div>
+            <div>
+                <strong>Generators</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Productivity">
+            <div class="category-icon">📋</div>
+            <div>
+                <strong>Productivity</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Education">
+            <div class="category-icon">🎓</div>
+            <div>
+                <strong>Education</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="File">
+            <div class="category-icon">🧰</div>
+            <div>
+                <strong>File Tools</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Career">
+            <div class="category-icon">🧑‍💼</div>
+            <div>
+                <strong>Career</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Design">
+            <div class="category-icon">🎨</div>
+            <div>
+                <strong>Design</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Background">
+            <div class="category-icon">✂️</div>
+            <div>
+                <strong>Background</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Document">
+            <div class="category-icon">📝</div>
+            <div>
+                <strong>Documents</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+        <div class="category" data-category="Excel">
+            <div class="category-icon">📊</div>
+            <div>
+                <strong>Excel & CSV</strong>
+                <small>10 tools</small>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NEW TOOLS
+========================= -->
+
+<section class="section" id="new">
+
+    <div class="section-head">
+
+        <div>
+            <div class="section-title">🆕 New Tools</div>
+            <div class="section-subtitle">
+                New tools will appear here as REY.TOOLS grows.
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tools-grid">
+
+        <div class="tool-card" data-tool="AI Image Generator">
+
+            <div class="tool-top">
+                <div class="tool-icon">✨</div>
+                <button class="favorite">☆</button>
+            </div>
+
+            <h3>AI Image Generator</h3>
+            <p>Create images from simple text prompts.</p>
+
+            <div class="tool-meta">
+                <span class="tag new">NEW</span>
+                <span class="tag">AI</span>
+            </div>
+
+        </div>
+
+
+        <div class="tool-card" data-tool="Image Upscaler">
+
+            <div class="tool-top">
+                <div class="tool-icon">🔎</div>
+                <button class="favorite">☆</button>
+            </div>
+
+            <h3>Image Upscaler</h3>
+            <p>Increase image resolution and clarity.</p>
+
+            <div class="tool-meta">
+                <span class="tag new">NEW</span>
+                <span class="tag">IMAGE</span>
+            </div>
+
+        </div>
+
+
+        <div class="tool-card" data-tool="AI Voice Generator">
+
+            <div class="tool-top">
+                <div class="tool-icon">🎙️</div>
+                <button class="favorite">☆</button>
+            </div>
+
+            <h3>AI Voice Generator</h3>
+            <p>Generate natural-sounding speech from text.</p>
+
+            <div class="tool-meta">
+                <span class="tag new">NEW</span>
+                <span class="tag">VOICE</span>
+            </div>
+
+        </div>
+
+
+        <div class="tool-card" data-tool="AI Video Generator">
+
+            <div class="tool-top">
+                <div class="tool-icon">🎬</div>
+                <button class="favorite">☆</button>
+            </div>
+
+            <h3>AI Video Generator</h3>
+            <p>Create video content using AI technology.</p>
+
+            <div class="tool-meta">
+                <span class="tag new">NEW</span>
+                <span class="tag">VIDEO</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="section" id="about">
+
+    <div class="cta">
+
+        <h2>One Platform. Hundreds of Possibilities.</h2>
+
+        <p>
+            REY.TOOLS is being built as a simple, fast and useful
+            online toolbox for everyone.
+        </p>
+
+        <a href="#categories" class="cta-btn">
+            Explore Tools →
+        </a>
+
+    </div>
+
+</section>
+
+
+<div class="no-results" id="noResults">
+
+    <strong>No tools found</strong>
+
+    Try another keyword or search for a different tool.
+
+</div>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="#" class="logo">
+                    <span class="logo-mark">R</span>
+                    <span>REY<span style="color:var(--primary)">.TOOLS</span></span>
+                </a>
+
+                <p>
+                    Everything you need. One place.
+                    Free online tools for work, creativity,
+                    productivity and everyday tasks.
+                </p>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Popular</h4>
+
+                <a href="#popular">PDF Tools</a>
+                <a href="#popular">Image Tools</a>
+                <a href="#popular">AI Tools</a>
+                <a href="#popular">QR Tools</a>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Categories</h4>
+
+                <a href="#categories">AI</a>
+                <a href="#categories">PDF</a>
+                <a href="#categories">Images</a>
+                <a href="#categories">Developer</a>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>REY.TOOLS</h4>
+
+                <a href="#about">About</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <span>© 2026 REY.TOOLS. All rights reserved.</span>
+
+            <span>Built for everyone.</span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   THEME
+========================= */
+
+const themeBtn = document.getElementById("themeBtn");
+
+const savedTheme = localStorage.getItem("rey-theme");
+
+if(savedTheme === "dark"){
+    document.body.classList.add("dark");
+    themeBtn.textContent = "☀";
+}
+
+themeBtn.addEventListener("click", function(){
+
+    document.body.classList.toggle("dark");
+
+    const isDark = document.body.classList.contains("dark");
+
+    localStorage.setItem(
+        "rey-theme",
+        isDark ? "dark" : "light"
+    );
+
+    themeBtn.textContent = isDark ? "☀" : "☾";
+
+});
+
+
+/* =========================
+   FAVORITES
+========================= */
+
+document.querySelectorAll(".favorite").forEach(function(button){
+
+    button.addEventListener("click", function(event){
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        this.classList.toggle("active");
+
+        this.textContent =
+            this.classList.contains("active")
+            ? "★"
+            : "☆";
+
+    });
+
+});
+
+
+/* =========================
+   SEARCH
+========================= */
+
+const searchInput =
+    document.getElementById("searchInput");
+
+const toolCards =
+    document.querySelectorAll(".tool-card");
+
+const categories =
+    document.querySelectorAll(".category");
+
+const noResults =
+    document.getElementById("noResults");
+
+
+searchInput.addEventListener("input", function(){
+
+    const query =
+        this.value.toLowerCase().trim();
+
+    let visible = 0;
+
+    toolCards.forEach(function(card){
+
+        const tool =
+            (card.dataset.tool || "").toLowerCase();
+
+        const category =
+            (card.dataset.category || "").toLowerCase();
+
+        const text =
+            card.innerText.toLowerCase();
+
+        const match =
+            !query ||
+            tool.includes(query) ||
+            category.includes(query) ||
+            text.includes(query);
+
+        card.style.display =
+            match ? "" : "none";
+
+        if(match){
+            visible++;
+        }
+
+    });
+
+    noResults.style.display =
+        query && visible === 0
+        ? "block"
+        : "none";
+
+});
+
+
+/* =========================
+   CTRL + K SEARCH
+========================= */
+
+document.addEventListener("keydown", function(event){
+
+    if(
+        (event.ctrlKey || event.metaKey) &&
+        event.key.toLowerCase() === "k"
+    ){
+
+        event.preventDefault();
+
+        searchInput.focus();
+
+    }
+
+});
+
+
+/* =========================
+   CATEGORY FILTER
+========================= */
+
+categories.forEach(function(category){
+
+    category.addEventListener("click", function(){
+
+        const selected =
+            this.dataset.category.toLowerCase();
+
+        searchInput.value =
+            this.dataset.category;
+
+        let visible = 0;
+
+        toolCards.forEach(function(card){
+
+            const cardCategory =
+                (card.dataset.category || "").toLowerCase();
+
+            const text =
+                card.innerText.toLowerCase();
+
+            const match =
+                cardCategory.includes(selected) ||
+                text.includes(selected);
+
+            card.style.display =
+                match ? "" : "none";
+
+            if(match){
+                visible++;
+            }
+
+        });
+
+        noResults.style.display =
+            visible === 0
+            ? "block"
+            : "none";
+
+        window.scrollTo({
+            top: document.querySelector(".section").offsetTop - 80,
+            behavior:"smooth"
+        });
+
+    });
+
+});
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const mobileBtn =
+    document.getElementById("mobileBtn");
+
+mobileBtn.addEventListener("click", function(){
+
+    const nav =
+        document.querySelector(".nav");
+
+    if(
+        nav.style.display === "flex"
+    ){
+
+        nav.style.display = "";
+
+    }else{
+
+        nav.style.display = "flex";
+
+        nav.style.position = "absolute";
+        nav.style.top = "64px";
+        nav.style.left = "15px";
+        nav.style.right = "15px";
+        nav.style.padding = "10px";
+        nav.style.flexDirection = "column";
+        nav.style.background = "var(--surface)";
+        nav.style.border = "1px solid var(--border)";
+        nav.style.borderRadius = "14px";
+        nav.style.boxShadow = "var(--shadow)";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+REY TOOLS does not intentionally persist user files, inputs, outputs, accounts, localStorage, or IndexedDB data.

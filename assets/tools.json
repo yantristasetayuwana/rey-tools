@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "ai-summarizer",
+    "category": "AI",
+    "name": "AI Summarizer",
+    "rank": 1
+  },
+  {
+    "id": "ai-rewriter",
+    "category": "AI",
+    "name": "AI Rewriter",
+    "rank": 2
+  },
+  {
+    "id": "ai-translator",
+    "category": "AI",
+    "name": "AI Translator",
+    "rank": 3
+  },
+  {
+    "id": "ai-text-generator",
+    "category": "AI",
+    "name": "AI Text Generator",
+    "rank": 4
+  },
+  {
+    "id": "ai-email-writer",
+    "category": "AI",
+    "name": "AI Email Writer",
+    "rank": 5
+  },
+  {
+    "id": "ai-title-generator",
+    "category": "AI",
+    "name": "AI Title Generator",
+    "rank": 6
+  },
+  {
+    "id": "ai-keyword-extractor",
+    "category": "AI",
+    "name": "AI Keyword Extractor",
+    "rank": 7
+  },
+  {
+    "id": "ai-sentiment-analyzer",
+    "category": "AI",
+    "name": "AI Sentiment Analyzer",
+    "rank": 8
+  },
+  {
+    "id": "ai-grammar-fixer",
+    "category": "AI",
+    "name": "AI Grammar Fixer",
+    "rank": 9
+  },
+  {
+    "id": "ai-chat-prompt-builder",
+    "category": "AI",
+    "name": "AI Chat Prompt Builder",
+    "rank": 10
+  },
+  {
+    "id": "pdf-merge",
+    "category": "PDF",
+    "name": "PDF Merge",
+    "rank": 1
+  },
+  {
+    "id": "pdf-split",
+    "category": "PDF",
+    "name": "PDF Split",
+    "rank": 2
+  },
+  {
+    "id": "pdf-compress",
+    "category": "PDF",
+    "name": "PDF Compress",
+    "rank": 3
+  },
+  {
+    "id": "pdf-to-excel",
+    "category": "PDF",
+    "name": "PDF to Excel",
+    "rank": 4
+  },
+  {
+    "id": "pdf-to-word",
+    "category": "PDF",
+    "name": "PDF to Word",
+    "rank": 5
+  },
+  {
+    "id": "pdf-to-jpg",
+    "category": "PDF",
+    "name": "PDF to JPG",
+    "rank": 6
+  },
+  {
+    "id": "jpg-to-pdf",
+    "category": "PDF",
+    "name": "JPG to PDF",
+    "rank": 7
+  },
+  {
+    "id": "pdf-rotate",
+    "category": "PDF",
+    "name": "PDF Rotate",
+    "rank": 8
+  },
+  {
+    "id": "pdf-protect",
+    "category": "PDF",
+    "name": "PDF Protect",
+    "rank": 9
+  },
+  {
+    "id": "pdf-unlock",
+    "category": "PDF",
+    "name": "PDF Unlock",
+    "rank": 10
+  },
+  {
+    "id": "image-resizer",
+    "category": "Image",
+    "name": "Image Resizer",
+    "rank": 1
+  },
+  {
+    "id": "image-compressor",
+    "category": "Image",
+    "name": "Image Compressor",
+    "rank": 2
+  },
+  {
+    "id": "image-cropper",
+    "category": "Image",
+    "name": "Image Cropper",
+    "rank": 3
+  },
+  {
+    "id": "image-converter",
+    "category": "Image",
+    "name": "Image Converter",
+    "rank": 4
+  },
+  {
+    "id": "image-rotate",
+    "category": "Image",
+    "name": "Image Rotate",
+    "rank": 5
+  },
+  {
+    "id": "image-flip",
+    "category": "Image",
+    "name": "Image Flip",
+    "rank": 6
+  },
+  {
+    "id": "image-watermark",
+    "category": "Image",
+    "name": "Image Watermark",
+    "rank": 7
+  },
+  {
+    "id": "image-grayscale",
+    "category": "Image",
+    "name": "Image Grayscale",
+    "rank": 8
+  },
+  {
+    "id": "image-blur",
+    "category": "Image",
+    "name": "Image Blur",
+    "rank": 9
+  },
+  {
+    "id": "image-color-picker",
+    "category": "Image",
+    "name": "Image Color Picker",
+    "rank": 10
+  },
+  {
+    "id": "video-compressor",
+    "category": "Video",
+    "name": "Video Compressor",
+    "rank": 1
+  },
+  {
+    "id": "video-trim",
+    "category": "Video",
+    "name": "Video Trim",
+    "rank": 2
+  },
+  {
+    "id": "video-convert",
+    "category": "Video",
+    "name": "Video Convert",
+    "rank": 3
+  },
+  {
+    "id": "video-gif-maker",
+    "category": "Video",
+    "name": "Video GIF Maker",
+    "rank": 4
+  },
+  {
+    "id": "video-frame-extractor",
+    "category": "Video",
+    "name": "Video Frame Extractor",
+    "rank": 5
+  },
+  {
+    "id": "video-mute",
+    "category": "Video",
+    "name": "Video Mute",
+    "rank": 6
+  },
+  {
+    "id": "video-resize",
+    "category": "Video",
+    "name": "Video Resize",
+    "rank": 7
+  },
+  {
+    "id": "video-rotate",
+    "category": "Video",
+    "name": "Video Rotate",
+    "rank": 8
+  },
+  {
+    "id": "video-speed",
+    "category": "Video",
+    "name": "Video Speed",
+    "rank": 9
+  },
+  {
+    "id": "video-metadata",
+    "category": "Video",
+    "name": "Video Metadata",
+    "rank": 10
+  },
+  {
+    "id": "audio-converter",
+    "category": "Audio",
+    "name": "Audio Converter",
+    "rank": 1
+  },
+  {
+    "id": "audio-trim",
+    "category": "Audio",
+    "name": "Audio Trim",
+    "rank": 2
+  },
+  {
+    "id": "audio-volume",
+    "category": "Audio",
+    "name": "Audio Volume",
+    "rank": 3
+  },
+  {
+    "id": "audio-fade",
+    "category": "Audio",
+    "name": "Audio Fade",
+    "rank": 4
+  },
+  {
+    "id": "audio-speed",
+    "category": "Audio",
+    "name": "Audio Speed",
+    "rank": 5
+  },
+  {
+    "id": "audio-mute",
+    "category": "Audio",
+    "name": "Audio Mute",
+    "rank": 6
+  },
+  {
+    "id": "audio-waveform",
+    "category": "Audio",
+    "name": "Audio Waveform",
+    "rank": 7
+  },
+  {
+    "id": "audio-metadata",
+    "category": "Audio",
+    "name": "Audio Metadata",
+    "rank": 8
+  },
+  {
+    "id": "audio-recorder",
+    "category": "Audio",
+    "name": "Audio Recorder",
+    "rank": 9
+  },
+  {
+    "id": "audio-format-info",
+    "category": "Audio",
+    "name": "Audio Format Info",
+    "rank": 10
+  },
+  {
+    "id": "voice-recorder",
+    "category": "Voice",
+    "name": "Voice Recorder",
+    "rank": 1
+  },
+  {
+    "id": "voice-to-text",
+    "category": "Voice",
+    "name": "Voice to Text",
+    "rank": 2
+  },
+  {
+    "id": "text-to-voice",
+    "category": "Voice",
+    "name": "Text to Voice",
+    "rank": 3
+  },
+  {
+    "id": "voice-speed",
+    "category": "Voice",
+    "name": "Voice Speed",
+    "rank": 4
+  },
+  {
+    "id": "voice-pitch",
+    "category": "Voice",
+    "name": "Voice Pitch",
+    "rank": 5
+  },
+  {
+    "id": "voice-volume",
+    "category": "Voice",
+    "name": "Voice Volume",
+    "rank": 6
+  },
+  {
+    "id": "voice-format-info",
+    "category": "Voice",
+    "name": "Voice Format Info",
+    "rank": 7
+  },
+  {
+    "id": "voice-timer",
+    "category": "Voice",
+    "name": "Voice Timer",
+    "rank": 8
+  },
+  {
+    "id": "voice-notes",
+    "category": "Voice",
+    "name": "Voice Notes",
+    "rank": 9
+  },
+  {
+    "id": "voice-playback",
+    "category": "Voice",
+    "name": "Voice Playback",
+    "rank": 10
+  },
+  {
+    "id": "text-counter",
+    "category": "Text",
+    "name": "Text Counter",
+    "rank": 1
+  },
+  {
+    "id": "word-counter",
+    "category": "Text",
+    "name": "Word Counter",
+    "rank": 2
+  },
+  {
+    "id": "character-counter",
+    "category": "Text",
+    "name": "Character Counter",
+    "rank": 3
+  },
+  {
+    "id": "line-counter",
+    "category": "Text",
+    "name": "Line Counter",
+    "rank": 4
+  },
+  {
+    "id": "remove-duplicate-lines",
+    "category": "Text",
+    "name": "Remove Duplicate Lines",
+    "rank": 5
+  },
+  {
+    "id": "sort-lines",
+    "category": "Text",
+    "name": "Sort Lines",
+    "rank": 6
+  },
+  {
+    "id": "find-and-replace",
+    "category": "Text",
+    "name": "Find and Replace",
+    "rank": 7
+  },
+  {
+    "id": "text-case-converter",
+    "category": "Text",
+    "name": "Text Case Converter",
+    "rank": 8
+  },
+  {
+    "id": "whitespace-cleaner",
+    "category": "Text",
+    "name": "Whitespace Cleaner",
+    "rank": 9
+  },
+  {
+    "id": "text-diff",
+    "category": "Text",
+    "name": "Text Diff",
+    "rank": 10
+  },
+  {
+    "id": "english-translator",
+    "category": "Translator",
+    "name": "English Translator",
+    "rank": 1
+  },
+  {
+    "id": "indonesian-translator",
+    "category": "Translator",
+    "name": "Indonesian Translator",
+    "rank": 2
+  },
+  {
+    "id": "spanish-translator",
+    "category": "Translator",
+    "name": "Spanish Translator",
+    "rank": 3
+  },
+  {
+    "id": "french-translator",
+    "category": "Translator",
+    "name": "French Translator",
+    "rank": 4
+  },
+  {
+    "id": "german-translator",
+    "category": "Translator",
+    "name": "German Translator",
+    "rank": 5
+  },
+  {
+    "id": "japanese-translator",
+    "category": "Translator",
+    "name": "Japanese Translator",
+    "rank": 6
+  },
+  {
+    "id": "korean-translator",
+    "category": "Translator",
+    "name": "Korean Translator",
+    "rank": 7
+  },
+  {
+    "id": "chinese-translator",
+    "category": "Translator",
+    "name": "Chinese Translator",
+    "rank": 8
+  },
+  {
+    "id": "language-detector",
+    "category": "Translator",
+    "name": "Language Detector",
+    "rank": 9
+  },
+  {
+    "id": "translation-url-helper",
+    "category": "Translator",
+    "name": "Translation URL Helper",
+    "rank": 10
+  },
+  {
+    "id": "url-encoder",
+    "category": "URL",
+    "name": "URL Encoder",
+    "rank": 1
+  },
+  {
+    "id": "url-decoder",
+    "category": "URL",
+    "name": "URL Decoder",
+    "rank": 2
+  },
+  {
+    "id": "url-parser",
+    "category": "URL",
+    "name": "URL Parser",
+    "rank": 3
+  },
+  {
+    "id": "url-cleaner",
+    "category": "URL",
+    "name": "URL Cleaner",
+    "rank": 4
+  },
+  {
+    "id": "url-query-builder",
+    "category": "URL",
+    "name": "URL Query Builder",
+    "rank": 5
+  },
+  {
+    "id": "url-query-extractor",
+    "category": "URL",
+    "name": "URL Query Extractor",
+    "rank": 6
+  },
+  {
+    "id": "url-slug-generator",
+    "category": "URL",
+    "name": "URL Slug Generator",
+    "rank": 7
+  },
+  {
+    "id": "url-validator",
+    "category": "URL",
+    "name": "URL Validator",
+    "rank": 8
+  },
+  {
+    "id": "url-base64",
+    "category": "URL",
+    "name": "URL Base64",
+    "rank": 9
+  },
+  {
+    "id": "url-shortener-helper",
+    "category": "URL",
+    "name": "URL Shortener Helper",
+    "rank": 10
+  },
+  {
+    "id": "qr-code-generator",
+    "category": "QR",
+    "name": "QR Code Generator",
+    "rank": 1
+  },
+  {
+    "id": "qr-wifi",
+    "category": "QR",
+    "name": "QR WiFi",
+    "rank": 2
+  },
+  {
+    "id": "qr-url",
+    "category": "QR",
+    "name": "QR URL",
+    "rank": 3
+  },
+  {
+    "id": "qr-email",
+    "category": "QR",
+    "name": "QR Email",
+    "rank": 4
+  },
+  {
+    "id": "qr-phone",
+    "category": "QR",
+    "name": "QR Phone",
+    "rank": 5
+  },
+  {
+    "id": "qr-sms",
+    "category": "QR",
+    "name": "QR SMS",
+    "rank": 6
+  },
+  {
+    "id": "qr-text",
+    "category": "QR",
+    "name": "QR Text",
+    "rank": 7
+  },
+  {
+    "id": "qr-vcard",
+    "category": "QR",
+    "name": "QR vCard",
+    "rank": 8
+  },
+  {
+    "id": "qr-location",
+    "category": "QR",
+    "name": "QR Location",
+    "rank": 9
+  },
+  {
+    "id": "qr-color-maker",
+    "category": "QR",
+    "name": "QR Color Maker",
+    "rank": 10
+  },
+  {
+    "id": "barcode-generator",
+    "category": "Barcode",
+    "name": "Barcode Generator",
+    "rank": 1
+  },
+  {
+    "id": "ean-13-generator",
+    "category": "Barcode",
+    "name": "EAN-13 Generator",
+    "rank": 2
+  },
+  {
+    "id": "ean-8-generator",
+    "category": "Barcode",
+    "name": "EAN-8 Generator",
+    "rank": 3
+  },
+  {
+    "id": "upc-a-generator",
+    "category": "Barcode",
+    "name": "UPC-A Generator",
+    "rank": 4
+  },
+  {
+    "id": "code-128-generator",
+    "category": "Barcode",
+    "name": "Code 128 Generator",
+    "rank": 5
+  },
+  {
+    "id": "code-39-generator",
+    "category": "Barcode",
+    "name": "Code 39 Generator",
+    "rank": 6
+  },
+  {
+    "id": "itf-14-generator",
+    "category": "Barcode",
+    "name": "ITF-14 Generator",
+    "rank": 7
+  },
+  {
+    "id": "isbn-barcode",
+    "category": "Barcode",
+    "name": "ISBN Barcode",
+    "rank": 8
+  },
+  {
+    "id": "barcode-reader",
+    "category": "Barcode",
+    "name": "Barcode Reader",
+    "rank": 9
+  },
+  {
+    "id": "barcode-check-digit",
+    "category": "Barcode",
+    "name": "Barcode Check Digit",
+    "rank": 10
+  },
+  {
+    "id": "password-generator",
+    "category": "Security",
+    "name": "Password Generator",
+    "rank": 1
+  },
+  {
+    "id": "password-strength",
+    "category": "Security",
+    "name": "Password Strength",
+    "rank": 2
+  },
+  {
+    "id": "hash-sha-256",
+    "category": "Security",
+    "name": "Hash SHA-256",
+    "rank": 3
+  },
+  {
+    "id": "hash-sha-512",
+    "category": "Security",
+    "name": "Hash SHA-512",
+    "rank": 4
+  },
+  {
+    "id": "base64-encoder",
+    "category": "Security",
+    "name": "Base64 Encoder",
+    "rank": 5
+  },
+  {
+    "id": "base64-decoder",
+    "category": "Security",
+    "name": "Base64 Decoder",
+    "rank": 6
+  },
+  {
+    "id": "uuid-generator",
+    "category": "Security",
+    "name": "UUID Generator",
+    "rank": 7
+  },
+  {
+    "id": "jwt-decoder",
+    "category": "Security",
+    "name": "JWT Decoder",
+    "rank": 8
+  },
+  {
+    "id": "hmac-generator",
+    "category": "Security",
+    "name": "HMAC Generator",
+    "rank": 9
+  },
+  {
+    "id": "secret-token-generator",
+    "category": "Security",
+    "name": "Secret Token Generator",
+    "rank": 10
+  },
+  {
+    "id": "json-formatter",
+    "category": "Developer",
+    "name": "JSON Formatter",
+    "rank": 1
+  },
+  {
+    "id": "json-minifier",
+    "category": "Developer",
+    "name": "JSON Minifier",
+    "rank": 2
+  },
+  {
+    "id": "xml-formatter",
+    "category": "Developer",
+    "name": "XML Formatter",
+    "rank": 3
+  },
+  {
+    "id": "html-formatter",
+    "category": "Developer",
+    "name": "HTML Formatter",
+    "rank": 4
+  },
+  {
+    "id": "css-minifier",
+    "category": "Developer",
+    "name": "CSS Minifier",
+    "rank": 5
+  },
+  {
+    "id": "js-minifier",
+    "category": "Developer",
+    "name": "JS Minifier",
+    "rank": 6
+  },
+  {
+    "id": "regex-tester",
+    "category": "Developer",
+    "name": "Regex Tester",
+    "rank": 7
+  },
+  {
+    "id": "url-parser-dev",
+    "category": "Developer",
+    "name": "URL Parser Dev",
+    "rank": 8
+  },
+  {
+    "id": "timestamp-converter",
+    "category": "Developer",
+    "name": "Timestamp Converter",
+    "rank": 9
+  },
+  {
+    "id": "color-converter",
+    "category": "Developer",
+    "name": "Color Converter",
+    "rank": 10
+  },
+  {
+    "id": "percentage-calculator",
+    "category": "Calculator",
+    "name": "Percentage Calculator",
+    "rank": 1
+  },
+  {
+    "id": "bmi-calculator",
+    "category": "Calculator",
+    "name": "BMI Calculator",
+    "rank": 2
+  },
+  {
+    "id": "age-calculator",
+    "category": "Calculator",
+    "name": "Age Calculator",
+    "rank": 3
+  },
+  {
+    "id": "loan-calculator",
+    "category": "Calculator",
+    "name": "Loan Calculator",
+    "rank": 4
+  },
+  {
+    "id": "tip-calculator",
+    "category": "Calculator",
+    "name": "Tip Calculator",
+    "rank": 5
+  },
+  {
+    "id": "discount-calculator",
+    "category": "Calculator",
+    "name": "Discount Calculator",
+    "rank": 6
+  },
+  {
+    "id": "gst-calculator",
+    "category": "Calculator",
+    "name": "GST Calculator",
+    "rank": 7
+  },
+  {
+    "id": "compound-interest",
+    "category": "Calculator",
+    "name": "Compound Interest",
+    "rank": 8
+  },
+  {
+    "id": "unit-price-calculator",
+    "category": "Calculator",
+    "name": "Unit Price Calculator",
+    "rank": 9
+  },
+  {
+    "id": "date-difference",
+    "category": "Calculator",
+    "name": "Date Difference",
+    "rank": 10
+  },
+  {
+    "id": "currency-converter",
+    "category": "Finance",
+    "name": "Currency Converter",
+    "rank": 1
+  },
+  {
+    "id": "profit-margin",
+    "category": "Finance",
+    "name": "Profit Margin",
+    "rank": 2
+  },
+  {
+    "id": "markup-calculator",
+    "category": "Finance",
+    "name": "Markup Calculator",
+    "rank": 3
+  },
+  {
+    "id": "roi-calculator",
+    "category": "Finance",
+    "name": "ROI Calculator",
+    "rank": 4
+  },
+  {
+    "id": "break-even",
+    "category": "Finance",
+    "name": "Break Even",
+    "rank": 5
+  },
+  {
+    "id": "emi-calculator",
+    "category": "Finance",
+    "name": "EMI Calculator",
+    "rank": 6
+  },
+  {
+    "id": "savings-calculator",
+    "category": "Finance",
+    "name": "Savings Calculator",
+    "rank": 7
+  },
+  {
+    "id": "investment-return",
+    "category": "Finance",
+    "name": "Investment Return",
+    "rank": 8
+  },
+  {
+    "id": "tax-calculator",
+    "category": "Finance",
+    "name": "Tax Calculator",
+    "rank": 9
+  },
+  {
+    "id": "invoice-total",
+    "category": "Finance",
+    "name": "Invoice Total",
+    "rank": 10
+  },
+  {
+    "id": "profit-calculator",
+    "category": "Business",
+    "name": "Profit Calculator",
+    "rank": 1
+  },
+  {
+    "id": "revenue-calculator",
+    "category": "Business",
+    "name": "Revenue Calculator",
+    "rank": 2
+  },
+  {
+    "id": "growth-rate",
+    "category": "Business",
+    "name": "Growth Rate",
+    "rank": 3
+  },
+  {
+    "id": "cagr-calculator",
+    "category": "Business",
+    "name": "CAGR Calculator",
+    "rank": 4
+  },
+  {
+    "id": "kpi-calculator",
+    "category": "Business",
+    "name": "KPI Calculator",
+    "rank": 5
+  },
+  {
+    "id": "productivity-rate",
+    "category": "Business",
+    "name": "Productivity Rate",
+    "rank": 6
+  },
+  {
+    "id": "capacity-calculator",
+    "category": "Business",
+    "name": "Capacity Calculator",
+    "rank": 7
+  },
+  {
+    "id": "headcount-calculator",
+    "category": "Business",
+    "name": "Headcount Calculator",
+    "rank": 8
+  },
+  {
+    "id": "business-days",
+    "category": "Business",
+    "name": "Business Days",
+    "rank": 9
+  },
+  {
+    "id": "meeting-cost",
+    "category": "Business",
+    "name": "Meeting Cost",
+    "rank": 10
+  },
+  {
+    "id": "selling-price",
+    "category": "E-Commerce",
+    "name": "Selling Price",
+    "rank": 1
+  },
+  {
+    "id": "marketplace-fee",
+    "category": "E-Commerce",
+    "name": "Marketplace Fee",
+    "rank": 2
+  },
+  {
+    "id": "discount-stack",
+    "category": "E-Commerce",
+    "name": "Discount Stack",
+    "rank": 3
+  },
+  {
+    "id": "shipping-cost",
+    "category": "E-Commerce",
+    "name": "Shipping Cost",
+    "rank": 4
+  },
+  {
+    "id": "profit-after-fee",
+    "category": "E-Commerce",
+    "name": "Profit After Fee",
+    "rank": 5
+  },
+  {
+    "id": "conversion-rate",
+    "category": "E-Commerce",
+    "name": "Conversion Rate",
+    "rank": 6
+  },
+  {
+    "id": "cart-total",
+    "category": "E-Commerce",
+    "name": "Cart Total",
+    "rank": 7
+  },
+  {
+    "id": "unit-economics",
+    "category": "E-Commerce",
+    "name": "Unit Economics",
+    "rank": 8
+  },
+  {
+    "id": "roas-calculator",
+    "category": "E-Commerce",
+    "name": "ROAS Calculator",
+    "rank": 9
+  },
+  {
+    "id": "sku-generator",
+    "category": "E-Commerce",
+    "name": "SKU Generator",
+    "rank": 10
+  },
+  {
+    "id": "ctr-calculator",
+    "category": "Marketing",
+    "name": "CTR Calculator",
+    "rank": 1
+  },
+  {
+    "id": "cpc-calculator",
+    "category": "Marketing",
+    "name": "CPC Calculator",
+    "rank": 2
+  },
+  {
+    "id": "cpm-calculator",
+    "category": "Marketing",
+    "name": "CPM Calculator",
+    "rank": 3
+  },
+  {
+    "id": "cpa-calculator",
+    "category": "Marketing",
+    "name": "CPA Calculator",
+    "rank": 4
+  },
+  {
+    "id": "roas-calculator-2",
+    "category": "Marketing",
+    "name": "ROAS Calculator",
+    "rank": 5
+  },
+  {
+    "id": "engagement-rate",
+    "category": "Marketing",
+    "name": "Engagement Rate",
+    "rank": 6
+  },
+  {
+    "id": "conversion-rate-2",
+    "category": "Marketing",
+    "name": "Conversion Rate",
+    "rank": 7
+  },
+  {
+    "id": "email-open-rate",
+    "category": "Marketing",
+    "name": "Email Open Rate",
+    "rank": 8
+  },
+  {
+    "id": "lead-cost",
+    "category": "Marketing",
+    "name": "Lead Cost",
+    "rank": 9
+  },
+  {
+    "id": "campaign-utm-builder",
+    "category": "Marketing",
+    "name": "Campaign UTM Builder",
+    "rank": 10
+  },
+  {
+    "id": "caption-generator",
+    "category": "Social Media",
+    "name": "Caption Generator",
+    "rank": 1
+  },
+  {
+    "id": "hashtag-generator",
+    "category": "Social Media",
+    "name": "Hashtag Generator",
+    "rank": 2
+  },
+  {
+    "id": "bio-generator",
+    "category": "Social Media",
+    "name": "Bio Generator",
+    "rank": 3
+  },
+  {
+    "id": "post-counter",
+    "category": "Social Media",
+    "name": "Post Counter",
+    "rank": 4
+  },
+  {
+    "id": "image-ratio-guide",
+    "category": "Social Media",
+    "name": "Image Ratio Guide",
+    "rank": 5
+  },
+  {
+    "id": "video-ratio-guide",
+    "category": "Social Media",
+    "name": "Video Ratio Guide",
+    "rank": 6
+  },
+  {
+    "id": "username-ideas",
+    "category": "Social Media",
+    "name": "Username Ideas",
+    "rank": 7
+  },
+  {
+    "id": "social-link-builder",
+    "category": "Social Media",
+    "name": "Social Link Builder",
+    "rank": 8
+  },
+  {
+    "id": "post-time-helper",
+    "category": "Social Media",
+    "name": "Post Time Helper",
+    "rank": 9
+  },
+  {
+    "id": "profile-text-cleaner",
+    "category": "Social Media",
+    "name": "Profile Text Cleaner",
+    "rank": 10
+  },
+  {
+    "id": "date-difference-2",
+    "category": "Date & Time",
+    "name": "Date Difference",
+    "rank": 1
+  },
+  {
+    "id": "add-days",
+    "category": "Date & Time",
+    "name": "Add Days",
+    "rank": 2
+  },
+  {
+    "id": "subtract-days",
+    "category": "Date & Time",
+    "name": "Subtract Days",
+    "rank": 3
+  },
+  {
+    "id": "age-from-date",
+    "category": "Date & Time",
+    "name": "Age From Date",
+    "rank": 4
+  },
+  {
+    "id": "week-number",
+    "category": "Date & Time",
+    "name": "Week Number",
+    "rank": 5
+  },
+  {
+    "id": "day-of-week",
+    "category": "Date & Time",
+    "name": "Day of Week",
+    "rank": 6
+  },
+  {
+    "id": "unix-timestamp",
+    "category": "Date & Time",
+    "name": "Unix Timestamp",
+    "rank": 7
+  },
+  {
+    "id": "timestamp-to-date",
+    "category": "Date & Time",
+    "name": "Timestamp to Date",
+    "rank": 8
+  },
+  {
+    "id": "time-zone-offset",
+    "category": "Date & Time",
+    "name": "Time Zone Offset",
+    "rank": 9
+  },
+  {
+    "id": "business-days-calculator",
+    "category": "Date & Time",
+    "name": "Business Days Calculator",
+    "rank": 10
+  },
+  {
+    "id": "length-converter",
+    "category": "Converter",
+    "name": "Length Converter",
+    "rank": 1
+  },
+  {
+    "id": "weight-converter",
+    "category": "Converter",
+    "name": "Weight Converter",
+    "rank": 2
+  },
+  {
+    "id": "temperature-converter",
+    "category": "Converter",
+    "name": "Temperature Converter",
+    "rank": 3
+  },
+  {
+    "id": "area-converter",
+    "category": "Converter",
+    "name": "Area Converter",
+    "rank": 4
+  },
+  {
+    "id": "volume-converter",
+    "category": "Converter",
+    "name": "Volume Converter",
+    "rank": 5
+  },
+  {
+    "id": "speed-converter",
+    "category": "Converter",
+    "name": "Speed Converter",
+    "rank": 6
+  },
+  {
+    "id": "pressure-converter",
+    "category": "Converter",
+    "name": "Pressure Converter",
+    "rank": 7
+  },
+  {
+    "id": "energy-converter",
+    "category": "Converter",
+    "name": "Energy Converter",
+    "rank": 8
+  },
+  {
+    "id": "power-converter",
+    "category": "Converter",
+    "name": "Power Converter",
+    "rank": 9
+  },
+  {
+    "id": "data-size-converter",
+    "category": "Converter",
+    "name": "Data Size Converter",
+    "rank": 10
+  },
+  {
+    "id": "password-generator-2",
+    "category": "Generator",
+    "name": "Password Generator",
+    "rank": 1
+  },
+  {
+    "id": "uuid-generator-2",
+    "category": "Generator",
+    "name": "UUID Generator",
+    "rank": 2
+  },
+  {
+    "id": "lorem-ipsum",
+    "category": "Generator",
+    "name": "Lorem Ipsum",
+    "rank": 3
+  },
+  {
+    "id": "random-number",
+    "category": "Generator",
+    "name": "Random Number",
+    "rank": 4
+  },
+  {
+    "id": "random-color",
+    "category": "Generator",
+    "name": "Random Color",
+    "rank": 5
+  },
+  {
+    "id": "slug-generator",
+    "category": "Generator",
+    "name": "Slug Generator",
+    "rank": 6
+  },
+  {
+    "id": "name-generator",
+    "category": "Generator",
+    "name": "Name Generator",
+    "rank": 7
+  },
+  {
+    "id": "invoice-number",
+    "category": "Generator",
+    "name": "Invoice Number",
+    "rank": 8
+  },
+  {
+    "id": "sku-generator-2",
+    "category": "Generator",
+    "name": "SKU Generator",
+    "rank": 9
+  },
+  {
+    "id": "otp-generator",
+    "category": "Generator",
+    "name": "OTP Generator",
+    "rank": 10
+  },
+  {
+    "id": "pomodoro-timer",
+    "category": "Productivity",
+    "name": "Pomodoro Timer",
+    "rank": 1
+  },
+  {
+    "id": "countdown-timer",
+    "category": "Productivity",
+    "name": "Countdown Timer",
+    "rank": 2
+  },
+  {
+    "id": "checklist",
+    "category": "Productivity",
+    "name": "Checklist",
+    "rank": 3
+  },
+  {
+    "id": "text-splitter",
+    "category": "Productivity",
+    "name": "Text Splitter",
+    "rank": 4
+  },
+  {
+    "id": "file-name-cleaner",
+    "category": "Productivity",
+    "name": "File Name Cleaner",
+    "rank": 5
+  },
+  {
+    "id": "batch-rename-helper",
+    "category": "Productivity",
+    "name": "Batch Rename Helper",
+    "rank": 6
+  },
+  {
+    "id": "meeting-agenda",
+    "category": "Productivity",
+    "name": "Meeting Agenda",
+    "rank": 7
+  },
+  {
+    "id": "daily-planner",
+    "category": "Productivity",
+    "name": "Daily Planner",
+    "rank": 8
+  },
+  {
+    "id": "habit-tracker",
+    "category": "Productivity",
+    "name": "Habit Tracker",
+    "rank": 9
+  },
+  {
+    "id": "focus-timer",
+    "category": "Productivity",
+    "name": "Focus Timer",
+    "rank": 10
+  },
+  {
+    "id": "grade-calculator",
+    "category": "Education",
+    "name": "Grade Calculator",
+    "rank": 1
+  },
+  {
+    "id": "gpa-calculator",
+    "category": "Education",
+    "name": "GPA Calculator",
+    "rank": 2
+  },
+  {
+    "id": "percentage-grade",
+    "category": "Education",
+    "name": "Percentage Grade",
+    "rank": 3
+  },
+  {
+    "id": "study-timer",
+    "category": "Education",
+    "name": "Study Timer",
+    "rank": 4
+  },
+  {
+    "id": "flashcard-maker",
+    "category": "Education",
+    "name": "Flashcard Maker",
+    "rank": 5
+  },
+  {
+    "id": "citation-helper",
+    "category": "Education",
+    "name": "Citation Helper",
+    "rank": 6
+  },
+  {
+    "id": "word-count",
+    "category": "Education",
+    "name": "Word Count",
+    "rank": 7
+  },
+  {
+    "id": "reading-time",
+    "category": "Education",
+    "name": "Reading Time",
+    "rank": 8
+  },
+  {
+    "id": "quiz-score",
+    "category": "Education",
+    "name": "Quiz Score",
+    "rank": 9
+  },
+  {
+    "id": "equation-solver",
+    "category": "Education",
+    "name": "Equation Solver",
+    "rank": 10
+  },
+  {
+    "id": "file-size-converter",
+    "category": "File",
+    "name": "File Size Converter",
+    "rank": 1
+  },
+  {
+    "id": "file-name-cleaner-2",
+    "category": "File",
+    "name": "File Name Cleaner",
+    "rank": 2
+  },
+  {
+    "id": "extension-extractor",
+    "category": "File",
+    "name": "Extension Extractor",
+    "rank": 3
+  },
+  {
+    "id": "mime-type-lookup",
+    "category": "File",
+    "name": "MIME Type Lookup",
+    "rank": 4
+  },
+  {
+    "id": "checksum-sha-256",
+    "category": "File",
+    "name": "Checksum SHA-256",
+    "rank": 5
+  },
+  {
+    "id": "base64-file",
+    "category": "File",
+    "name": "Base64 File",
+    "rank": 6
+  },
+  {
+    "id": "data-uri-generator",
+    "category": "File",
+    "name": "Data URI Generator",
+    "rank": 7
+  },
+  {
+    "id": "file-preview",
+    "category": "File",
+    "name": "File Preview",
+    "rank": 8
+  },
+  {
+    "id": "text-file-cleaner",
+    "category": "File",
+    "name": "Text File Cleaner",
+    "rank": 9
+  },
+  {
+    "id": "file-metadata",
+    "category": "File",
+    "name": "File Metadata",
+    "rank": 10
+  },
+  {
+    "id": "resume-bullet-builder",
+    "category": "Career",
+    "name": "Resume Bullet Builder",
+    "rank": 1
+  },
+  {
+    "id": "cover-letter-helper",
+    "category": "Career",
+    "name": "Cover Letter Helper",
+    "rank": 2
+  },
+  {
+    "id": "job-title-generator",
+    "category": "Career",
+    "name": "Job Title Generator",
+    "rank": 3
+  },
+  {
+    "id": "salary-calculator",
+    "category": "Career",
+    "name": "Salary Calculator",
+    "rank": 4
+  },
+  {
+    "id": "experience-calculator",
+    "category": "Career",
+    "name": "Experience Calculator",
+    "rank": 5
+  },
+  {
+    "id": "notice-period",
+    "category": "Career",
+    "name": "Notice Period",
+    "rank": 6
+  },
+  {
+    "id": "interview-score",
+    "category": "Career",
+    "name": "Interview Score",
+    "rank": 7
+  },
+  {
+    "id": "skills-gap-checklist",
+    "category": "Career",
+    "name": "Skills Gap Checklist",
+    "rank": 8
+  },
+  {
+    "id": "portfolio-bio",
+    "category": "Career",
+    "name": "Portfolio Bio",
+    "rank": 9
+  },
+  {
+    "id": "professional-email",
+    "category": "Career",
+    "name": "Professional Email",
+    "rank": 10
+  },
+  {
+    "id": "color-picker",
+    "category": "Design",
+    "name": "Color Picker",
+    "rank": 1
+  },
+  {
+    "id": "hex-rgb-converter",
+    "category": "Design",
+    "name": "HEX RGB Converter",
+    "rank": 2
+  },
+  {
+    "id": "rgb-hsl-converter",
+    "category": "Design",
+    "name": "RGB HSL Converter",
+    "rank": 3
+  },
+  {
+    "id": "contrast-checker",
+    "category": "Design",
+    "name": "Contrast Checker",
+    "rank": 4
+  },
+  {
+    "id": "gradient-generator",
+    "category": "Design",
+    "name": "Gradient Generator",
+    "rank": 5
+  },
+  {
+    "id": "shadow-generator",
+    "category": "Design",
+    "name": "Shadow Generator",
+    "rank": 6
+  },
+  {
+    "id": "css-border-radius",
+    "category": "Design",
+    "name": "CSS Border Radius",
+    "rank": 7
+  },
+  {
+    "id": "css-grid-generator",
+    "category": "Design",
+    "name": "CSS Grid Generator",
+    "rank": 8
+  },
+  {
+    "id": "css-flex-generator",
+    "category": "Design",
+    "name": "CSS Flex Generator",
+    "rank": 9
+  },
+  {
+    "id": "aspect-ratio",
+    "category": "Design",
+    "name": "Aspect Ratio",
+    "rank": 10
+  },
+  {
+    "id": "background-color-picker",
+    "category": "Background",
+    "name": "Background Color Picker",
+    "rank": 1
+  },
+  {
+    "id": "image-background-blur",
+    "category": "Background",
+    "name": "Image Background Blur",
+    "rank": 2
+  },
+  {
+    "id": "image-background-grayscale",
+    "category": "Background",
+    "name": "Image Background Grayscale",
+    "rank": 3
+  },
+  {
+    "id": "image-background-tint",
+    "category": "Background",
+    "name": "Image Background Tint",
+    "rank": 4
+  },
+  {
+    "id": "background-pattern",
+    "category": "Background",
+    "name": "Background Pattern",
+    "rank": 5
+  },
+  {
+    "id": "dot-pattern-generator",
+    "category": "Background",
+    "name": "Dot Pattern Generator",
+    "rank": 6
+  },
+  {
+    "id": "grid-pattern-generator",
+    "category": "Background",
+    "name": "Grid Pattern Generator",
+    "rank": 7
+  },
+  {
+    "id": "noise-pattern-generator",
+    "category": "Background",
+    "name": "Noise Pattern Generator",
+    "rank": 8
+  },
+  {
+    "id": "solid-background-maker",
+    "category": "Background",
+    "name": "Solid Background Maker",
+    "rank": 9
+  },
+  {
+    "id": "gradient-background-maker",
+    "category": "Background",
+    "name": "Gradient Background Maker",
+    "rank": 10
+  },
+  {
+    "id": "markdown-preview",
+    "category": "Documents",
+    "name": "Markdown Preview",
+    "rank": 1
+  },
+  {
+    "id": "html-preview",
+    "category": "Documents",
+    "name": "HTML Preview",
+    "rank": 2
+  },
+  {
+    "id": "plain-text-formatter",
+    "category": "Documents",
+    "name": "Plain Text Formatter",
+    "rank": 3
+  },
+  {
+    "id": "document-word-count",
+    "category": "Documents",
+    "name": "Document Word Count",
+    "rank": 4
+  },
+  {
+    "id": "document-case-converter",
+    "category": "Documents",
+    "name": "Document Case Converter",
+    "rank": 5
+  },
+  {
+    "id": "line-numberer",
+    "category": "Documents",
+    "name": "Line Numberer",
+    "rank": 6
+  },
+  {
+    "id": "table-generator",
+    "category": "Documents",
+    "name": "Table Generator",
+    "rank": 7
+  },
+  {
+    "id": "csv-preview",
+    "category": "Documents",
+    "name": "CSV Preview",
+    "rank": 8
+  },
+  {
+    "id": "json-to-csv",
+    "category": "Documents",
+    "name": "JSON to CSV",
+    "rank": 9
+  },
+  {
+    "id": "csv-to-json",
+    "category": "Documents",
+    "name": "CSV to JSON",
+    "rank": 10
+  },
+  {
+    "id": "csv-to-json-2",
+    "category": "Data",
+    "name": "CSV to JSON",
+    "rank": 1
+  },
+  {
+    "id": "json-to-csv-2",
+    "category": "Data",
+    "name": "JSON to CSV",
+    "rank": 2
+  },
+  {
+    "id": "csv-cleaner",
+    "category": "Data",
+    "name": "CSV Cleaner",
+    "rank": 3
+  },
+  {
+    "id": "csv-column-extractor",
+    "category": "Data",
+    "name": "CSV Column Extractor",
+    "rank": 4
+  },
+  {
+    "id": "csv-sorter",
+    "category": "Data",
+    "name": "CSV Sorter",
+    "rank": 5
+  },
+  {
+    "id": "csv-filter",
+    "category": "Data",
+    "name": "CSV Filter",
+    "rank": 6
+  },
+  {
+    "id": "json-path-helper",
+    "category": "Data",
+    "name": "JSON Path Helper",
+    "rank": 7
+  },
+  {
+    "id": "data-deduplicator",
+    "category": "Data",
+    "name": "Data Deduplicator",
+    "rank": 8
+  },
+  {
+    "id": "data-normalizer",
+    "category": "Data",
+    "name": "Data Normalizer",
+    "rank": 9
+  },
+  {
+    "id": "random-data-generator",
+    "category": "Data",
+    "name": "Random Data Generator",
+    "rank": 10
+  }
+]
